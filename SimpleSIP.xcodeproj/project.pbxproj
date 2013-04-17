@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E02BBA41712EF6E000ED168 /* libRalleeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E02BBA21712EF6E000ED168 /* libRalleeSDK.a */; };
+		4E323F9416F72B0F000D9264 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E323F9316F72B0F000D9264 /* libsqlite3.0.dylib */; };
+		4E3241A316F73634000D9264 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A216F73634000D9264 /* Social.framework */; };
+		4E3241A616F73654000D9264 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A416F73654000D9264 /* Accounts.framework */; };
+		4E3241A716F73654000D9264 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A516F73654000D9264 /* AdSupport.framework */; };
+		4E3241A916F7369E000D9264 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A816F7369E000D9264 /* FacebookSDK.framework */; };
+		4E629E4D16D358180058EC35 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629E4C16D358180058EC35 /* UIKit.framework */; };
+		4E629E4F16D358180058EC35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629E4E16D358180058EC35 /* Foundation.framework */; };
+		4E629E5116D358180058EC35 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629E5016D358180058EC35 /* CoreGraphics.framework */; };
+		4E629E5716D358180058EC35 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E629E5516D358180058EC35 /* InfoPlist.strings */; };
+		4E629E5916D358180058EC35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E629E5816D358180058EC35 /* main.m */; };
+		4E629E5D16D358180058EC35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E629E5C16D358180058EC35 /* AppDelegate.m */; };
+		4E629E5F16D358180058EC35 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E629E5E16D358180058EC35 /* Default.png */; };
+		4E629E6116D358180058EC35 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E629E6016D358180058EC35 /* Default@2x.png */; };
+		4E629E6316D358180058EC35 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E629E6216D358180058EC35 /* Default-568h@2x.png */; };
+		4E629E6616D358180058EC35 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E629E6416D358180058EC35 /* MainStoryboard.storyboard */; };
+		4E629E6916D358180058EC35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E629E6816D358180058EC35 /* ViewController.m */; };
+		4E629EC716D35A300058EC35 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629EC216D35A300058EC35 /* AddressBook.framework */; };
+		4E629EC816D35A300058EC35 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629EC316D35A300058EC35 /* AddressBookUI.framework */; };
+		4E629EC916D35A300058EC35 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629EC416D35A300058EC35 /* AudioToolbox.framework */; };
+		4E629ECA16D35A300058EC35 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629EC516D35A300058EC35 /* CFNetwork.framework */; };
+		4E629ECB16D35A300058EC35 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629EC616D35A300058EC35 /* SystemConfiguration.framework */; };
+		4E629ECD16D35A5C0058EC35 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E629ECC16D35A5C0058EC35 /* IOKit.framework */; };
+		4E629ED216D35B5F0058EC35 /* MainPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E629ED116D35B140058EC35 /* MainPage.m */; };
+		4E629ED416D35BF10058EC35 /* fbDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E629ED316D35BF10058EC35 /* fbDefault.png */; };
+		4E629ED616D39B8C0058EC35 /* simplesip.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E629ED516D39B8C0058EC35 /* simplesip.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4E02BBA21712EF6E000ED168 /* libRalleeSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRalleeSDK.a; path = RalleeSDK/libRalleeSDK.a; sourceTree = "<group>"; };
+		4E02BBA51712EF82000ED168 /* RalleeSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RalleeSDK.h; path = RalleeSDK/RalleeSDK.h; sourceTree = "<group>"; };
+		4E323F9316F72B0F000D9264 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		4E3241A216F73634000D9264 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4E3241A416F73654000D9264 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		4E3241A516F73654000D9264 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		4E3241A816F7369E000D9264 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Others/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		4E629E4916D358180058EC35 /* SimpleSIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSIP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E629E4C16D358180058EC35 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4E629E4E16D358180058EC35 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4E629E5016D358180058EC35 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4E629E5416D358180058EC35 /* SimpleSIP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSIP-Info.plist"; sourceTree = "<group>"; };
+		4E629E5616D358180058EC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4E629E5816D358180058EC35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E629E5A16D358180058EC35 /* SimpleSIP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSIP-Prefix.pch"; sourceTree = "<group>"; };
+		4E629E5B16D358180058EC35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4E629E5C16D358180058EC35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4E629E5E16D358180058EC35 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4E629E6016D358180058EC35 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4E629E6216D358180058EC35 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4E629E6516D358180058EC35 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4E629E6716D358180058EC35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4E629E6816D358180058EC35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4E629E6F16D358EE0058EC35 /* fbDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbDefault.png; sourceTree = "<group>"; };
+		4E629EC216D35A300058EC35 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		4E629EC316D35A300058EC35 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		4E629EC416D35A300058EC35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4E629EC516D35A300058EC35 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4E629EC616D35A300058EC35 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4E629ECC16D35A5C0058EC35 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		4E629ED016D35B140058EC35 /* MainPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPage.h; sourceTree = "<group>"; };
+		4E629ED116D35B140058EC35 /* MainPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainPage.m; sourceTree = "<group>"; };
+		4E629ED316D35BF10058EC35 /* fbDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbDefault.png; sourceTree = "<group>"; };
+		4E629ED516D39B8C0058EC35 /* simplesip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = simplesip.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E629E4616D358180058EC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E323F9416F72B0F000D9264 /* libsqlite3.0.dylib in Frameworks */,
+				4E629E4D16D358180058EC35 /* UIKit.framework in Frameworks */,
+				4E3241A916F7369E000D9264 /* FacebookSDK.framework in Frameworks */,
+				4E629E4F16D358180058EC35 /* Foundation.framework in Frameworks */,
+				4E629E5116D358180058EC35 /* CoreGraphics.framework in Frameworks */,
+				4E629EC716D35A300058EC35 /* AddressBook.framework in Frameworks */,
+				4E629EC816D35A300058EC35 /* AddressBookUI.framework in Frameworks */,
+				4E629EC916D35A300058EC35 /* AudioToolbox.framework in Frameworks */,
+				4E629ECA16D35A300058EC35 /* CFNetwork.framework in Frameworks */,
+				4E629ECB16D35A300058EC35 /* SystemConfiguration.framework in Frameworks */,
+				4E629ECD16D35A5C0058EC35 /* IOKit.framework in Frameworks */,
+				4E3241A316F73634000D9264 /* Social.framework in Frameworks */,
+				4E3241A616F73654000D9264 /* Accounts.framework in Frameworks */,
+				4E3241A716F73654000D9264 /* AdSupport.framework in Frameworks */,
+				4E02BBA41712EF6E000ED168 /* libRalleeSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E629E4016D358180058EC35 = {
+			isa = PBXGroup;
+			children = (
+				4E02BBA21712EF6E000ED168 /* libRalleeSDK.a */,
+				4E02BBA51712EF82000ED168 /* RalleeSDK.h */,
+				4E629E5216D358180058EC35 /* SimpleSIP */,
+				4E629E4B16D358180058EC35 /* Frameworks */,
+				4E629E4A16D358180058EC35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E629E4A16D358180058EC35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E629E4916D358180058EC35 /* SimpleSIP.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E629E4B16D358180058EC35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E3241A816F7369E000D9264 /* FacebookSDK.framework */,
+				4E323F9316F72B0F000D9264 /* libsqlite3.0.dylib */,
+				4E3241A416F73654000D9264 /* Accounts.framework */,
+				4E3241A516F73654000D9264 /* AdSupport.framework */,
+				4E3241A216F73634000D9264 /* Social.framework */,
+				4E629ECC16D35A5C0058EC35 /* IOKit.framework */,
+				4E629EC216D35A300058EC35 /* AddressBook.framework */,
+				4E629EC316D35A300058EC35 /* AddressBookUI.framework */,
+				4E629EC416D35A300058EC35 /* AudioToolbox.framework */,
+				4E629EC516D35A300058EC35 /* CFNetwork.framework */,
+				4E629EC616D35A300058EC35 /* SystemConfiguration.framework */,
+				4E629E4C16D358180058EC35 /* UIKit.framework */,
+				4E629E4E16D358180058EC35 /* Foundation.framework */,
+				4E629E5016D358180058EC35 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E629E5216D358180058EC35 /* SimpleSIP */ = {
+			isa = PBXGroup;
+			children = (
+				4E629E5B16D358180058EC35 /* AppDelegate.h */,
+				4E629E5C16D358180058EC35 /* AppDelegate.m */,
+				4E629E6416D358180058EC35 /* MainStoryboard.storyboard */,
+				4E629E6716D358180058EC35 /* ViewController.h */,
+				4E629E6816D358180058EC35 /* ViewController.m */,
+				4E629ED016D35B140058EC35 /* MainPage.h */,
+				4E629ED116D35B140058EC35 /* MainPage.m */,
+				4E629E5316D358180058EC35 /* Supporting Files */,
+				4E629ED316D35BF10058EC35 /* fbDefault.png */,
+				4E629E6F16D358EE0058EC35 /* fbDefault.png */,
+				4E629ED516D39B8C0058EC35 /* simplesip.png */,
+			);
+			path = SimpleSIP;
+			sourceTree = "<group>";
+		};
+		4E629E5316D358180058EC35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E629E5416D358180058EC35 /* SimpleSIP-Info.plist */,
+				4E629E5516D358180058EC35 /* InfoPlist.strings */,
+				4E629E5816D358180058EC35 /* main.m */,
+				4E629E5A16D358180058EC35 /* SimpleSIP-Prefix.pch */,
+				4E629E5E16D358180058EC35 /* Default.png */,
+				4E629E6016D358180058EC35 /* Default@2x.png */,
+				4E629E6216D358180058EC35 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E629E4816D358180058EC35 /* SimpleSIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E629E6C16D358180058EC35 /* Build configuration list for PBXNativeTarget "SimpleSIP" */;
+			buildPhases = (
+				4E629E4516D358180058EC35 /* Sources */,
+				4E629E4616D358180058EC35 /* Frameworks */,
+				4E629E4716D358180058EC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSIP;
+			productName = SimpleSIP;
+			productReference = 4E629E4916D358180058EC35 /* SimpleSIP.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E629E4116D358180058EC35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Techlites Solution Pvt Ltd";
+			};
+			buildConfigurationList = 4E629E4416D358180058EC35 /* Build configuration list for PBXProject "SimpleSIP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				he,
+			);
+			mainGroup = 4E629E4016D358180058EC35;
+			productRefGroup = 4E629E4A16D358180058EC35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E629E4816D358180058EC35 /* SimpleSIP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E629E4716D358180058EC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E629E5716D358180058EC35 /* InfoPlist.strings in Resources */,
+				4E629E5F16D358180058EC35 /* Default.png in Resources */,
+				4E629E6116D358180058EC35 /* Default@2x.png in Resources */,
+				4E629E6316D358180058EC35 /* Default-568h@2x.png in Resources */,
+				4E629E6616D358180058EC35 /* MainStoryboard.storyboard in Resources */,
+				4E629ED416D35BF10058EC35 /* fbDefault.png in Resources */,
+				4E629ED616D39B8C0058EC35 /* simplesip.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E629E4516D358180058EC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E629ED216D35B5F0058EC35 /* MainPage.m in Sources */,
+				4E629E5916D358180058EC35 /* main.m in Sources */,
+				4E629E5D16D358180058EC35 /* AppDelegate.m in Sources */,
+				4E629E6916D358180058EC35 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4E629E5516D358180058EC35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E629E5616D358180058EC35 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4E629E6416D358180058EC35 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E629E6516D358180058EC35 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E629E6A16D358180058EC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4E629E6B16D358180058EC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E629E6D16D358180058EC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chandrasekhar Reddy (89272D29DN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandrasekhar Reddy (89272D29DN)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Others/FacebookSDK\"",
+					"\"$(SRCROOT)/SimpleSIP/Others\"",
+					"\"$(SRCROOT)/Others\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSIP/SimpleSIP-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "SimpleSIP/SimpleSIP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../sim-libs\"",
+					"\"$(SRCROOT)/SimpleSIP/Others\"",
+					"\"$(SRCROOT)/RalleeSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C449096E-ABFC-4F5D-856E-F8114FF4D27E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C449096E-ABFC-4F5D-856E-F8114FF4D27E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4E629E6E16D358180058EC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chandrasekhar Reddy (89272D29DN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chandrasekhar Reddy (89272D29DN)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Others/FacebookSDK\"",
+					"\"$(SRCROOT)/SimpleSIP/Others\"",
+					"\"$(SRCROOT)/Others\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSIP/SimpleSIP-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "SimpleSIP/SimpleSIP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../sim-libs\"",
+					"\"$(SRCROOT)/SimpleSIP/Others\"",
+					"\"$(SRCROOT)/RalleeSDK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "C449096E-ABFC-4F5D-856E-F8114FF4D27E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C449096E-ABFC-4F5D-856E-F8114FF4D27E";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E629E4416D358180058EC35 /* Build configuration list for PBXProject "SimpleSIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E629E6A16D358180058EC35 /* Debug */,
+				4E629E6B16D358180058EC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E629E6C16D358180058EC35 /* Build configuration list for PBXNativeTarget "SimpleSIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E629E6D16D358180058EC35 /* Debug */,
+				4E629E6E16D358180058EC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E629E4116D358180058EC35 /* Project object */;
+}
