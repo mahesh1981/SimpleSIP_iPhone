@@ -43,8 +43,20 @@ NSString* fbID;
     
     callUserData cud;
     
+<<<<<<< HEAD
     cud.called_user = @"100004208564196";
     cud.caller_user = @"816784662";
+=======
+    cud.called_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    
+    if ([[callUser text] length] == 0) {
+        cud.caller_user = @"816784662";//@"100004208564196";//@"10000573052003";//
+    }
+    else {
+        cud.caller_user = [callUser text];
+    }
+    
+>>>>>>> 0bb7a41da0da7710a37451a19a53d2646a609f6e
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
     

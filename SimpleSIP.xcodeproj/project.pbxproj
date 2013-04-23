@@ -331,7 +331,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Others/FacebookSDK\"",
-					"\"$(SRCROOT)/SimpleSIP/Others\"",
 					"\"$(SRCROOT)/Others\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -343,7 +342,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../sim-libs\"",
-					"\"$(SRCROOT)/SimpleSIP/Others\"",
 					"\"$(SRCROOT)/RalleeSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,7 +360,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Others/FacebookSDK\"",
-					"\"$(SRCROOT)/SimpleSIP/Others\"",
 					"\"$(SRCROOT)/Others\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -374,7 +371,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../sim-libs\"",
-					"\"$(SRCROOT)/SimpleSIP/Others\"",
 					"\"$(SRCROOT)/RalleeSDK\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
