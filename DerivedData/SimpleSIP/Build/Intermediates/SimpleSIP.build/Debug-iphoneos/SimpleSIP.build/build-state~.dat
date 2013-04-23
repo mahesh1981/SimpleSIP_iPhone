@@ -1,0 +1,522 @@
+TSimpleSIP
+v5
+r1
+cCheck dependencies
+cCpResource "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist" DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist
+cProcessInfoPlistFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Info.plist SimpleSIP/SimpleSIP-Info.plist
+cProcessPCH /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.pth SimpleSIP/SimpleSIP-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP normal armv7
+cGenerateDSYMFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP
+cCopyStringsFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/InfoPlist.strings SimpleSIP/en.lproj/InfoPlist.strings
+cCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png SimpleSIP/Default.png
+cCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png SimpleSIP/Default@2x.png
+cCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png SimpleSIP/Default-568h@2x.png
+cCompileStoryboard /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/MainStoryboard.storyboard
+cCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png SimpleSIP/fbDefault.png
+cCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png SimpleSIP/simplesip.png
+cProcessProductPackaging "/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision
+cProcessProductPackaging "/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision
+cTouch /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+cProcessProductPackaging "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent
+cCodeSign /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk
+c0000000050ED385D0000000000000110
+t1357723741
+s272
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+c000000005131558600000000000001A7
+t1362187654
+s423
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+c000000005131558600000000000001E5
+t1362187654
+s485
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Accounts.framework/Accounts
+c000000005131558D0000000000049500
+t1362187661
+s300288
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AdSupport.framework/AdSupport
+c000000005131558D0000000000008BE0
+t1362187661
+s35808
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AddressBook.framework/AddressBook
+c000000005131558D000000000014A320
+t1362187661
+s1352480
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AddressBookUI.framework/AddressBookUI
+c000000005131558D00000000002AC100
+t1362187661
+s2801920
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000005131558E00000000006B1F40
+t1362187662
+s7020352
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000005131558F00000000002C8530
+t1362187663
+s2917680
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000513155920000000000322700
+t1362187666
+s3286784
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000051315595000000000062AD10
+t1362187669
+s6466832
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000005131559500000000000015F7
+t1362187669
+s5623
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+c000000005131559800000000000EC4D0
+t1362187672
+s967888
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Social.framework/Social
+c000000005131559C00000000001889F0
+t1362187676
+s1608176
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+c000000005131559C00000000000CAFB0
+t1362187676
+s831408
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000005131559C0000000000000E8D
+t1362187676
+s3725
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000005131559D00000000011BCDF0
+t1362187677
+s18599408
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/include/Availability.h
+c00000000513155AB0000000000001B73
+t1362187691
+s7027
+
+N/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/lib/libsqlite3.0.dylib
+c00000000513155BD0000000000121470
+t1362187709
+s1184880
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.pth
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.o
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.o
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/SimpleSIP.LinkFileList
+c0000000051751861000000000000029D
+t1366628449
+s669
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.o
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.o
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Info.plist
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/PkgInfo
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/MainStoryboard.storyboardc
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png
+t2
+s0
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/FacebookSDK
+c00000000516F80EB00000000008451D4
+t1366261995
+s8671700
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/libRalleeSDK.a
+c000000005175074D00000000002AB530
+t1366624077
+s2798896
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m
+c00000000516F80EC0000000000000A1A
+t1366261996
+s2586
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default-568h@2x.png
+c00000000516F80EC00000000000048A2
+t1366261996
+s18594
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default.png
+c00000000516F80EC000000000000198C
+t1366261996
+s6540
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default@2x.png
+c00000000516F80EC0000000000003EEB
+t1366261996
+s16107
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m
+c00000000516F80EC0000000000000BD9
+t1366261996
+s3033
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/SimpleSIP-Prefix.pch
+c00000000516F80EC0000000000000141
+t1366261996
+s321
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m
+c00000000517145C00000000000002EEC
+t1366377920
+s12012
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/InfoPlist.strings
+c00000000516F80EC000000000000002D
+t1366261996
+s45
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/MainStoryboard.storyboard
+c00000000516F80EC0000000000006FD5
+t1366261996
+s28629
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/fbDefault.png
+c00000000516F80EC00000000000009E1
+t1366261996
+s2529
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m
+c00000000516F80EC0000000000000173
+t1366261996
+s371
+
+N/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/simplesip.png
+c00000000516F80EC00000000000017CD
+t1366261996
+s6093
+
+N/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision
+c000000005163F4F80000000000003B6F
+t1365505272
+s15215
+
+NSimpleSIP/SimpleSIP-Info.plist
+c00000000516F80EC000000000000059C
+t1366261996
+s1436
+
+CBuild AST from /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m
+r0
+
+CBuild AST from /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m
+r0
+
+CBuild AST from /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m
+r0
+
+CBuild AST from /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies5a9f5ae14f25b741^b95499e14f25b741^---0#1#0#--18"Check dependencies36"A7410238-C114-4977-B81B-F39ABDCDB7AA-
+
+CCodeSign /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+s388321275.453034
+e388321277.298061
+r1
+xCodeSign
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"CodeSign DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app721474fb4f25b741^664d4cfd4f25b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/0000000000000000^961"CodeSign DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv CODESIGN_ALLOCATE "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate"    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign --force --sign 5543a3542b83f55bb5535e7303fe8389f8a7ade7 --resource-rules=/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist --entitlements /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app36"844EB782-A3F6-4256-9C67-BFD945AF7109-
+
+CCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s388321253.981021
+e388321254.241627
+r1
+xCompileC
+xDerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.o
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m2849fbe54f25b741^a54961e64f25b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m0000000000000000^3189"CompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.o SimpleSIP/AppDelegate.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk" -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.hmap -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/include -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources/armv7 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others -include /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch -MMD -MT dependencies -MF /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.d --serialize-diagnostics /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.dia -c /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.m -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/AppDelegate.o36"43CFAE90-9DB8-4844-9AC9-FF2557DBB19E-
+
+CCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s388321253.061731
+e388321253.994251
+r1
+xCompileC
+xDerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.o
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m:110:30: warning: local declaration of 'tableView' hides instance variable [-Wshadow-ivar]
+o    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+o                             ^
+o/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m:16:17: warning: incomplete implementation [-Wincomplete-implementation]
+o@implementation MainPage
+o                ^
+o/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.h:36:1: note: method definition for 'refreshBuddies:' not found
+o- (IBAction)refreshBuddies:(id)sender;
+o^
+o/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.h:38:1: note: method definition for 'addBuddy:' not found
+o- (IBAction)addBuddy:(id)sender;
+o^
+o2 warnings generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection73"Compile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.mbbec0fe54f25b741^6f9efee54f25b741^-789"/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m:110:30: warning: local declaration of 'tableView' hides instance variable [-Wshadow-ivar]    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];                             ^/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m:16:17: warning: incomplete implementation [-Wincomplete-implementation]@implementation MainPage                ^/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.h:36:1: note: method definition for 'refreshBuddies:' not found- (IBAction)refreshBuddies:(id)sender;^/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.h:38:1: note: method definition for 'addBuddy:' not found- (IBAction)addBuddy:(id)sender;^2 warnings generated.2(36%IDEClangDiagnosticActivityLogMessage2@56"Local declaration of 'tableView' hides instance variable-388321253#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@81"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m0000000000000000^109#29#109#29#2398#0#14"Semantic Issue--2@25"Incomplete implementation-388321253#18446744073709551615#0#2(2@49"Method definition for 'refreshBuddies:' not found-388321253#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@81"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.h0000000000000000^35#0#35#0#717#0#14"Semantic Issue--2@43"Method definition for 'addBuddy:' not found-388321253#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@81"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.h0000000000000000^37#0#37#0#757#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@81"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m0000000000000000^15#16#15#16#272#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@81"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m0000000000000000^3171"CompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.o SimpleSIP/MainPage.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk" -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.hmap -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/include -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources/armv7 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others -include /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch -MMD -MT dependencies -MF /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.d --serialize-diagnostics /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.dia -c /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/MainPage.m -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/MainPage.o36"ACC0721A-4596-4E77-8D28-38A646774F4E-
+
+CCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s388321253.995535
+e388321254.409776
+r1
+xCompileC
+xDerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.o
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection79"Compile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m5800ffe54f25b741^7ff570e64f25b741^---0#0#0#-19%DVTDocumentLocation2@87"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m0000000000000000^3207"CompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.o SimpleSIP/ViewController.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk" -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.hmap -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/include -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources/armv7 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others -include /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch -MMD -MT dependencies -MF /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.d --serialize-diagnostics /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.dia -c /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/ViewController.m -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/ViewController.o36"05A08FF6-2E3F-4A79-9B0A-5064AE325135-
+
+CCompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s388321253.061404
+e388321253.979604
+r1
+xCompileC
+xDerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.o
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Compile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.mdee80fe54f25b741^cec6fae54f25b741^---0#0#0#-19%DVTDocumentLocation2@77"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m0000000000000000^3147"CompileC DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.o SimpleSIP/main.m normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -x objective-c -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk" -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.hmap -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/include -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources/armv7 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others -include /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch -MMD -MT dependencies -MF /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.d --serialize-diagnostics /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.dia -c /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/main.o36"C953BAFB-A46C-4355-B394-531311BB1318-
+
+CCompileStoryboard /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/MainStoryboard.storyboard
+s388321257.230064
+e388321275.307052
+r1
+xCompileStoryboard
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/MainStoryboard.storyboard
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"CompileStoryboard SimpleSIP/en.lproj/MainStoryboard.storyboard72fe3ae94f25b741^77bf4efb4f25b741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/MainStoryboard.storyboard0000000000000000^942"CompileStoryboard SimpleSIP/en.lproj/MainStoryboard.storyboard    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 6.0    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv XCODE_DEVELOPER_USR_PATH "/Applications/Xcode 2.app/Contents/Developer/usr/bin/.."    "/Applications/Xcode 2.app/Contents/Developer/usr/bin/ibtool" --errors --warnings --notices --output-format human-readable-text --compile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/MainStoryboard.storyboardc /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/MainStoryboard.storyboard --sdk "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk"36"5BA78008-FFEB-445A-AAD8-67F55F0AE229-
+
+CCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png SimpleSIP/Default-568h@2x.png
+s388321257.179928
+e388321257.316731
+r1
+xCopyPNGFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png
+xSimpleSIP/Default-568h@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png SimpleSIP/Default-568h@2x.png8d272ee94f25b741^f51451e94f25b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default-568h@2x.png0000000000000000^704"CopyPNGFile "DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png" "SimpleSIP/Default-568h@2x.png"    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng" -compress "" "/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default-568h@2x.png" "/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default-568h@2x.png"36"9B2E4D21-F5C6-4400-9CB7-4D392062D083-
+
+CCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png SimpleSIP/Default.png
+s388321256.953469
+e388321257.178664
+r1
+xCopyPNGFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png
+xSimpleSIP/Default.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection111"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png SimpleSIP/Default.pnga228f4e84f25b741^babc2de94f25b741^---0#0#0#-19%DVTDocumentLocation2@82"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default.png0000000000000000^664"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png SimpleSIP/Default.png    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng" -compress "" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default.png /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default.png36"7C19B02F-6479-4A7D-9234-785B549EC4B6-
+
+CCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png SimpleSIP/Default@2x.png
+s388321257.002823
+e388321257.228752
+r1
+xCopyPNGFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png
+xSimpleSIP/Default@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png SimpleSIP/Default@2x.png45d400e94f25b741^088f3ae94f25b741^---0#0#0#-19%DVTDocumentLocation2@85"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default@2x.png0000000000000000^684"CopyPNGFile "DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png" "SimpleSIP/Default@2x.png"    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng" -compress "" "/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Default@2x.png" "/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Default@2x.png"36"33D235FA-6FB4-448A-9B4C-CCED5F80AA84-
+
+CCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png SimpleSIP/fbDefault.png
+s388321257.318107
+e388321257.389073
+r1
+xCopyPNGFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png
+xSimpleSIP/fbDefault.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png SimpleSIP/fbDefault.png988651e94f25b741^e59963e94f25b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/fbDefault.png0000000000000000^672"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png SimpleSIP/fbDefault.png    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng" -compress "" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/fbDefault.png /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/fbDefault.png36"64FB865D-B161-4C7E-88D3-9B66AC1F462B-
+
+CCopyPNGFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png SimpleSIP/simplesip.png
+s388321257.390462
+e388321257.451987
+r1
+xCopyPNGFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png
+xSimpleSIP/simplesip.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png SimpleSIP/simplesip.pngc80c64e94f25b741^07b573e94f25b741^---0#0#0#-19%DVTDocumentLocation2@84"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/simplesip.png0000000000000000^672"CopyPNGFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png SimpleSIP/simplesip.png    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng" -compress "" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/simplesip.png /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/simplesip.png36"52CBBD1A-92C4-4343-AD4B-B1AFF3DEE1C2-
+
+CCopyStringsFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/InfoPlist.strings SimpleSIP/en.lproj/InfoPlist.strings
+s388321256.952970
+e388321257.001420
+r1
+xCopyStringsFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/InfoPlist.strings
+xSimpleSIP/en.lproj/InfoPlist.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy SimpleSIP/en.lproj/InfoPlist.strings630cf4e84f25b741^ca7000e94f25b741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/en.lproj/InfoPlist.strings0000000000000000^640"CopyStringsFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj/InfoPlist.strings SimpleSIP/en.lproj/InfoPlist.strings    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/en.lproj -- SimpleSIP/en.lproj/InfoPlist.strings36"568BACB2-C3E0-407D-890C-AECCFEF51C53-
+
+CCpResource "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist" DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist
+s388321249.602510
+e388321249.611375
+r1
+xCpResource
+x/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist
+xDerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Copy DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist50549ae14f25b741^569a9ce14f25b741^---0#0#0#-19%DVTDocumentLocation2@146"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist000000000080d041^816"CpResource "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist" DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/ResourceRules.plist" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app36"9ED52FCB-3A71-4B53-AB47-A0A73776DE4E-
+
+CGenerateDSYMFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP
+s388321256.489224
+e388321256.944625
+r1
+xGenerateDSYMFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Generate /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYMd6557de84f25b741^6bd2f1e84f25b741^---0#0#0#-19%DVTDocumentLocation2@131"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM000000000080d041^752"GenerateDSYMFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app.dSYM36"5052533F-0710-4498-8CA2-AB00720F55F9-
+
+CLd /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP normal armv7
+s388321254.416867
+e388321256.482172
+r1
+xLd
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP
+xnormal
+xarmv7
+old: warning: directory not found for option '-L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/../../sim-libs'
+old: warning: directory not found for option '-L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others'
+old: warning: directory not found for option '-F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Link /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIPc3d86ae64f25b741^836e7be84f25b741^-328"ld: warning: directory not found for option '-L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/../../sim-libs'ld: warning: directory not found for option '-L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others'ld: warning: directory not found for option '-F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others'3(21%IDEActivityLogMessage2@94"Directory not found for option '-L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/../../sim-libs'-388321254#0#108#-1#-23%DVTTextDocumentLocation3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#27"Apple Mach-O Linker Warning--2@96"Directory not found for option '-L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others'-388321254#108#110#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#27"Apple Mach-O Linker Warning--2@96"Directory not found for option '-F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others'-388321254#218#110#-1#-3@-0000000000000000^18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#18446744073709551615#0#27"Apple Mach-O Linker Warning--0#0#0#--1853"Ld DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP normal armv7    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -arch armv7 -isysroot "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk" -L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/../../sim-libs -L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -L/Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others -filelist /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/Objects-normal/armv7/SimpleSIP.LinkFileList -dead_strip -fobjc-link-runtime -miphoneos-version-min=6.0 -lsqlite3.0 -framework UIKit -framework FacebookSDK -framework Foundation -framework CoreGraphics -framework AddressBook -framework AddressBookUI -framework AudioToolbox -framework CFNetwork -framework SystemConfiguration -framework IOKit -framework Social -framework Accounts -framework AdSupport -lRalleeSDK -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/SimpleSIP36"3789A477-1B5B-40F3-9C2B-FCAA9B4F0CE0-
+
+CProcessInfoPlistFile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Info.plist SimpleSIP/SimpleSIP-Info.plist
+s388321249.603031
+e388321249.630744
+r1
+xProcessInfoPlistFile
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Info.plist
+xSimpleSIP/SimpleSIP-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection38"Process SimpleSIP/SimpleSIP-Info.plist58719ae14f25b741^2234a2e14f25b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/SimpleSIP-Info.plist0000000000000000^894"ProcessInfoPlistFile DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Info.plist SimpleSIP/SimpleSIP-Info.plist    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility SimpleSIP/SimpleSIP-Info.plist -genpkginfo /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/ResourceRules.plist -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/Info.plist36"686538A0-F25F-4910-A54F-162F31ADC262-
+
+CProcessPCH /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.pth SimpleSIP/SimpleSIP-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s388321249.638620
+e388321253.054539
+r1
+xProcessPCH
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.pth
+xSimpleSIP/SimpleSIP-Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile SimpleSIP/SimpleSIP-Prefix.pch37aaa3e14f25b741^7bf50de54f25b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/SimpleSIP-Prefix.pch0000000000000000^3058"ProcessPCH DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.pth SimpleSIP/SimpleSIP-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Applications/Xcode 2.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -x objective-c-header -arch armv7 -fmessage-length=0 -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk" -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -miphoneos-version-min=6.0 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.hmap -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/include -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources/armv7 -I/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/DerivedSources -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/Others -F/Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others --serialize-diagnostics /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.dia -c /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/SimpleSIP-Prefix.pch -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.pth -MMD -MT dependencies -MF /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/PrecompiledHeaders/SimpleSIP-Prefix-hbgbpnzrhetmosbgbrcirxwjhwkn/SimpleSIP-Prefix.pch.d36"4384050A-DB01-4133-B971-EB71AFED7B14-
+
+CProcessPCH /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Index/PrecompiledHeaders/SimpleSIP-Prefix-fiadbbzzwjidnxcpwivqohijjles_ast/SimpleSIP-Prefix.pch.pth SimpleSIP/SimpleSIP-Prefix.pch normal armv7 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessProductPackaging "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent
+s388321275.440651
+e388321275.444556
+r1
+xProcessProductPackaging
+x/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection253"ProcessProductPackaging "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist" DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent64e870fb4f25b741^c2dd71fb4f25b741^---0#0#0#-19%DVTDocumentLocation2@165"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent000000000080d041^838"ProcessProductPackaging "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist" DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/Entitlements.plist" -entitlements -format xml -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Intermediates/SimpleSIP.build/Debug-iphoneos/SimpleSIP.build/SimpleSIP.xcent36"09D8E4BC-405B-48B9-8126-9CF2CD35B443-
+
+CProcessProductPackaging "/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision" /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision
+s388321275.365014
+e388321275.369909
+r1
+xProcessProductPackaging
+x/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection232"ProcessProductPackaging "/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision" DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision6cb35dfb4f25b741^09c15efb4f25b741^---0#0#0#-19%DVTDocumentLocation2@151"file://localhost/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision0000000000000000^770"ProcessProductPackaging "/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision" DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-productPackagingUtility "/Users/vikashsamota/Library/MobileDevice/Provisioning Profiles/C449096E-ABFC-4F5D-856E-F8114FF4D27E.mobileprovision" -o /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app/embedded.mobileprovision36"13870A89-21FD-4D61-A187-5C5BBFC94C53-
+
+CTouch /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+s388321275.377875
+e388321275.432605
+r1
+xTouch
+x/Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Touch /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.appb3d260fb4f25b741^79ce6efb4f25b741^---0#0#0#--449"Touch DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app    cd /Users/vikashsamota/Desktop/SimpleSIP_iPhone    setenv PATH "/Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode 2.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/vikashsamota/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/SimpleSIP.app36"74C4A7B3-F3D5-4821-A9D9-588FDDA1C4D6-
+

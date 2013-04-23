@@ -43,7 +43,7 @@ NSString* fbID;
     
     callUserData cud;
     
-    cud.called_user = @"100005636130299";
+    cud.called_user = @"100004208564196";
     cud.caller_user = @"816784662";
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
@@ -88,7 +88,7 @@ NSString* fbID;
     ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
     ud.app_ver = @"rallee_2.0";
     ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
-    ud.SNID = @"third_test_userID_52";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
     ud.SNPassword = @"noPassword";
     ud.SNName = @"rt";

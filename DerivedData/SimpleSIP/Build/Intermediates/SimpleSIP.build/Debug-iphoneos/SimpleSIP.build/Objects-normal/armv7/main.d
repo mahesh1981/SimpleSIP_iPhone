@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/main.m \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/SimpleSIP/AppDelegate.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FacebookSDK.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBSession.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBRequest.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBRequestConnection.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBGraphObject.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBError.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBSettings.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBLoginView.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBGraphUser.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBGraphPlace.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBGraphLocation.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBProfilePictureView.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBUserSettingsViewController.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBViewController.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBPlacePickerViewController.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBCacheDescriptor.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBFriendPickerViewController.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBOpenGraphAction.h \
+  /Users/vikashsamota/Desktop/SimpleSIP_iPhone/Others/FacebookSDK/FacebookSDK.framework/Headers/FBNativeDialogs.h
