@@ -8,5 +8,4 @@ dependencies: \
   /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeReg.h \
   /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeJSON.h \
   /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeVoiceCall.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequestConnection.h
+  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h

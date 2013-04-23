@@ -8,5 +8,4 @@ dependencies: \
   /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonBase.h \
   /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonWriter.h \
   /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeAccounts.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequestConnection.h
+  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h
