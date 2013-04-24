@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RalleeRequestConnection.h"
+
 
 @interface RalleeRequest : NSObject
 {

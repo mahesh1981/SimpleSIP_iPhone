@@ -61,6 +61,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    NSString *sipURI = [cell.textLabel text];
+    NSString *str = [NSString stringWithFormat:@"sip:%@@%@",sipURI, shared.server];
+    
+    NSLog(@"sip uri : %@",str);
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -104,32 +115,15 @@
     [super dealloc];
 }
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
-    NSString *sipURI = [cell.textLabel text];
-    NSString *str = [NSString stringWithFormat:@"sip:%@@%@",sipURI, shared.server];
-    
-    NSLog(@"sip uri : %@",str);
-}
-
 - (void)message:(NSNotification *)notification {
     NSLog(@"in message method");
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[[ notification userInfo ] objectForKey: @"title"] message:[[ notification userInfo ] objectForKey: @"message"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
-    
-    
 }
 
 #pragma mark sip end
 
-
-
-
-- (IBAction)call:(id)sender {
-    
+- (IBAction)call:(id)sender {    
 
 }
 

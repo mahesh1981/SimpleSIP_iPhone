@@ -28,6 +28,8 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 - (void)processRegState:(NSDictionary *)userInfo;
 //- (void)processRegState:(NSNotification *)notification;
 
+- (BOOL) callUsingNumber:(NSString *)number;
+
 @property (nonatomic, copy) RalleeAccountsHandler handler;
 
 @end

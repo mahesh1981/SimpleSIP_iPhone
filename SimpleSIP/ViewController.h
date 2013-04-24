@@ -13,19 +13,29 @@
 
 
 
-@interface ViewController : UIViewController <UITextFieldDelegate>{
+@interface ViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>{
 
+    IBOutlet UILabel *statusLabel;
+    IBOutlet UITableView* table;
     IBOutlet UITextField *callUser;
     IBOutlet UIButton *loginButton;
+    IBOutlet UIButton* callButton;
     AppDelegate *shared;
     
     RalleeAccounts* accs2;
+    NSMutableArray* friends;
+    NSMutableArray* friendsNames;
+    NSString* called_user;
+    IBOutlet UITextField* numberField;
+    IBOutlet UIButton* dialNum;
 }
 - (IBAction)fbLogin:(id)sender;
 
 - (void) callBack:(NSDictionary*)dict2;
 
 - (IBAction)callUser:(id)sender;
+
+- (IBAction)dialNumber:(id)sender;
 
 @property (strong, nonatomic) AppDelegate *shared;
 
