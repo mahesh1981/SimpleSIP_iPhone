@@ -20,7 +20,6 @@
 //#import "RalleeMiddlewareConnectionController.h"
 
 NSString* kAppId = @"141462222695498";
-
 NSString* fbID;
 
 //#define chandra
@@ -38,33 +37,25 @@ NSString* fbID;
 - (IBAction)callUser:(id)sender {
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
-  
-    //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
+
+    callUserData cud;    
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    //cud.caller_user = @"553998562";
     
-    callUserData cud;
-    
-    cud.called_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-    
-    if ([[callUser text] length] == 0) {
-        cud.caller_user = @"816784662";//@"100004208564196";//@"10000573052003";//
-    }
-    else {
-        cud.caller_user = [callUser text];
-    }
+    if ([[callUser text] length] == 0) 
+        cud.called_user = @"553998562";
+    else
+        cud.called_user = [callUser text];
     
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
     
     BOOL abc = [voice callUser:cud];
     
-    
-    if (abc) {
-        NSLog(@"yes ");
-    }
-    else {
-        NSLog(@"no ");
-    }
-    
+    if (abc)
+        NSLog(@"calling is succesful");
+    else
+        NSLog(@"call is unsuccesful");
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -274,6 +265,7 @@ NSString* fbID;
 #pragma mark sip start
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
     return YES;
 }
 

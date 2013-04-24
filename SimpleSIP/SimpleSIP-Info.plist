@@ -35,7 +35,7 @@
 		<string>armv7</string>
 	</array>
 	<key>CFBundleIconFile</key>
-	<string>simplesip</string>
+	<string>RalleeSIP.png</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
