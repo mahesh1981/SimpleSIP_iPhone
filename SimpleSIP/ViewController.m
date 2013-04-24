@@ -20,7 +20,6 @@
 //#import "RalleeMiddlewareConnectionController.h"
 
 NSString* kAppId = @"141462222695498";
-
 NSString* fbID;
 
 //#define chandra
@@ -38,6 +37,7 @@ NSString* fbID;
 - (IBAction)callUser:(id)sender {
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
+<<<<<<< HEAD
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
     
@@ -57,19 +57,27 @@ NSString* fbID;
     }
     
     
+=======
+
+    callUserData cud;    
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    //cud.caller_user = @"553998562";
+    
+    if ([[callUser text] length] == 0) 
+        cud.called_user = @"553998562";
+    else
+        cud.called_user = [callUser text];
+    
+>>>>>>> df6352e7fbc7fffaa936d38d38b32cb139ef3aa8
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
     
     BOOL abc = [voice callUser:cud];
     
-    
-    if (abc) {
-        NSLog(@"yes ");
-    }
-    else {
-        NSLog(@"no ");
-    }
-    
+    if (abc)
+        NSLog(@"calling is succesful");
+    else
+        NSLog(@"call is unsuccesful");
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -100,7 +108,7 @@ NSString* fbID;
     ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
     ud.app_ver = @"rallee_2.0";
     ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
-    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    ud.SNID = @"third_test_userID_52";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
     ud.SNPassword = @"noPassword";
     ud.SNName = @"rt";
