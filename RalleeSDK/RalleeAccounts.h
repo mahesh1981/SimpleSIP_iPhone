@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef struct accountDetails {
     NSString* userName;
@@ -26,6 +27,8 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 - (BOOL)registerToSIPServer:(accountDetails)acc;
 - (void)processRegState:(NSDictionary *)userInfo;
 //- (void)processRegState:(NSNotification *)notification;
+
+- (BOOL) callUsingNumber:(NSString *)number;
 
 @property (nonatomic, copy) RalleeAccountsHandler handler;
 
