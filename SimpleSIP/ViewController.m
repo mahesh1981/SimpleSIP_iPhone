@@ -53,7 +53,7 @@ NSString* fbID;
     static NSString* reUseID = @"Friend";
     
     UITableViewCell *cell = [tableView1 dequeueReusableCellWithIdentifier:reUseID];
-    [cell.imageView setImage:[UIImage imageNamed:@"fbDefault"]];
+    [cell.imageView setImage:[UIImage imageNamed:@"def.jpeg"]];
     
     [cell.textLabel setText:[friends objectAtIndex:indexPath.row]];
     [cell.detailTextLabel setText:[friendsNames objectAtIndex:indexPath.row]];

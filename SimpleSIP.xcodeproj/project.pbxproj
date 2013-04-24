@@ -10,6 +10,7 @@
 		4E02BBA41712EF6E000ED168 /* libRalleeSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E02BBA21712EF6E000ED168 /* libRalleeSDK.a */; };
 		4E1FA1491727B1940097C9E8 /* RalleeSIP.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E1FA1481727B1940097C9E8 /* RalleeSIP.png */; };
 		4E1FA14B1727BBAC0097C9E8 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E1FA14A1727BBAC0097C9E8 /* bg.jpg */; };
+		4E1FA14D1727EBF90097C9E8 /* def.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4E1FA14C1727EBF90097C9E8 /* def.jpeg */; };
 		4E323F9416F72B0F000D9264 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E323F9316F72B0F000D9264 /* libsqlite3.0.dylib */; };
 		4E3241A316F73634000D9264 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A216F73634000D9264 /* Social.framework */; };
 		4E3241A616F73654000D9264 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A416F73654000D9264 /* Accounts.framework */; };
@@ -42,6 +43,7 @@
 		4E02BBA51712EF82000ED168 /* RalleeSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RalleeSDK.h; path = RalleeSDK/RalleeSDK.h; sourceTree = "<group>"; };
 		4E1FA1481727B1940097C9E8 /* RalleeSIP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RalleeSIP.png; path = SimpleSIP/RalleeSIP.png; sourceTree = "<group>"; };
 		4E1FA14A1727BBAC0097C9E8 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		4E1FA14C1727EBF90097C9E8 /* def.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = def.jpeg; sourceTree = "<group>"; };
 		4E323F9316F72B0F000D9264 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		4E3241A216F73634000D9264 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		4E3241A416F73654000D9264 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -157,6 +159,7 @@
 				4E629E5316D358180058EC35 /* Supporting Files */,
 				4E629ED316D35BF10058EC35 /* fbDefault.png */,
 				4E629E6F16D358EE0058EC35 /* fbDefault.png */,
+				4E1FA14C1727EBF90097C9E8 /* def.jpeg */,
 				4E629ED516D39B8C0058EC35 /* simplesip.png */,
 			);
 			path = SimpleSIP;
@@ -237,6 +240,7 @@
 				4E629ED616D39B8C0058EC35 /* simplesip.png in Resources */,
 				4E1FA1491727B1940097C9E8 /* RalleeSIP.png in Resources */,
 				4E1FA14B1727BBAC0097C9E8 /* bg.jpg in Resources */,
+				4E1FA14D1727EBF90097C9E8 /* def.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
