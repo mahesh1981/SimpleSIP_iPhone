@@ -34,9 +34,44 @@ NSString* fbID;
 @synthesize shared;
 @synthesize requestConnection;
 
+- (IBAction)dialNumber:(id)sender {
+    RalleeAccounts* r = [RalleeAccounts sharedController];
+    
+    if ([[numberField text] length] == 0)
+        [r callUsingNumber:@"190"];
+    else
+        [r callUsingNumber:[numberField text]];
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [friends count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView1 cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString* reUseID = @"Friend";
+    
+    UITableViewCell *cell = [tableView1 dequeueReusableCellWithIdentifier:reUseID];
+    [cell.imageView setImage:[UIImage imageNamed:@"fbDefault"]];
+    
+    [cell.textLabel setText:[friends objectAtIndex:indexPath.row]];
+    [cell.detailTextLabel setText:[friendsNames objectAtIndex:indexPath.row]];
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    called_user = [cell.textLabel text];
+    [callUser setText:called_user];
+}
+
 - (IBAction)callUser:(id)sender {
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
+<<<<<<< HEAD
 <<<<<<< HEAD
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
@@ -69,11 +104,18 @@ NSString* fbID;
         cud.called_user = [callUser text];
     
 >>>>>>> df6352e7fbc7fffaa936d38d38b32cb139ef3aa8
+=======
+    callUserData cud;    
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    cud.called_user = [callUser text];
+>>>>>>> fb65094d74daf62d735a27a76963122320a172d6
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
     
-    BOOL abc = [voice callUser:cud];
+   
     
+    
+    BOOL abc = [voice callUser:cud];
     if (abc)
         NSLog(@"calling is succesful");
     else
@@ -85,6 +127,7 @@ NSString* fbID;
 }
 
 - (void) newUser {
+    
     AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     
     RalleeReg* ralleeReg = [RalleeReg sharedController];
@@ -108,14 +151,17 @@ NSString* fbID;
     ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
     ud.app_ver = @"rallee_2.0";
     ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
-    ud.SNID = @"third_test_userID_52";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
     ud.SNPassword = @"noPassword";
     ud.SNName = @"rt";
     ud.device_token = @"device_iPhone";
     
 #endif
-    
+    [statusLabel setText:@"Requesting Middleware for authentication"];
+    [table setHidden:NO];
+    [callButton setHidden:NO];
+    [callUser setHidden:NO];
     BOOL str = [ralleeReg registerToRallee:ud];
     
     //    id str = [middleware registerToRallee:[[NSDictionary alloc] initWithObjectsAndKeys:[[NSDictionary alloc] initWithObjectsAndKeys: [[NSDictionary alloc] initWithObjectsAndKeys:appDelegate.session.accessToken, @"fb", nil], @"access_tokens", [[NSDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%@:%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"],[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]], @"fb",     nil], @"account_info", nil],@"credentials",     [[NSDictionary alloc] initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"], @"first_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], @"last_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"], @"email",     @"Rallee_2.0", @"rallee_ver",     nil], @"data", nil]];
@@ -127,6 +173,7 @@ NSString* fbID;
 }
 
 - (void)sendRequest:(NSString*)graphPath {
+    [statusLabel setText:@"Requesting fb parameters"];
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     NSLog(@"FacebookController::sendRequest-graphPath = %@", graphPath);
@@ -179,6 +226,8 @@ NSString* fbID;
         return;
     }
     
+    [statusLabel setText:@"Received fb parameters"];
+    
     NSLog(@"--FB Login Result End-- \n%@", result);
     
     NSLog(@"id of the user : %@", [result objectForKey:@"id"]);
@@ -188,22 +237,13 @@ NSString* fbID;
     [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"username"] forKey:@"FBusername"];
     
     [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"email"] forKey:@"FBemail"];
-    
-    // [[NSUserDefaults standardUserDefaults] setObject:@"parlapallichandrasekharreddy@gmail.com" forKey:@"FBemail"];
-    
-    //[[NSUserDefaults standardUserDefaults] setObject:@"mallick_prasenjit@rediffmail.com" forKey:@"FBemail"];
-    
-    //[[NSUserDefaults standardUserDefaults] setObject:@"durgesh@techlites.com" forKey:@"FBemail"];
-    
-    
-    
     NSString* name1 = [result objectForKey:@"name"];
     
     NSArray* arr = [name1 componentsSeparatedByString:@" "];
     
     if ([arr count] > 0) {
         [[NSUserDefaults standardUserDefaults] setObject:[arr objectAtIndex:0] forKey:@"firstName"];
-        
+
         if ([arr count] > 1)
             [[NSUserDefaults standardUserDefaults] setObject:[arr objectAtIndex:1] forKey:@"lastName"];
         else
@@ -230,10 +270,7 @@ NSString* fbID;
 
 - (void) updateView {
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSLog(@"appdelegate session token %@",appDelegate.session.accessToken);
-    
-    
-    
+
     if (NULL == appDelegate.session.accessToken) {
         NSLog(@"null token so no request");
         [loginButton setHidden:NO];
@@ -245,6 +282,7 @@ NSString* fbID;
 }
 
 - (IBAction)fbLogin:(id)sender {
+    [statusLabel setText:@"Facebook Login is in process"];
     
     // get the app delegate so that we can access the session property
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
@@ -277,9 +315,7 @@ NSString* fbID;
     [appDelegate.session openWithCompletionHandler:^(FBSession *session,
                                                      FBSessionState status,
                                                      NSError *error) {
-        // and here we make sure to update our UX according to the new session state
-        NSLog(@"session token %@",session.accessToken);
-        // appDelegate.session.accessToken
+        [statusLabel setText:@"Facebook Login is complete"];
         [self updateView];
     }];
 }
@@ -299,21 +335,41 @@ NSString* fbID;
 {
     [super viewDidLoad];
     
+    [table setHidden:YES];
+    [callButton setHidden:YES];
+    [callUser setHidden:YES];
+    [statusLabel setText:@""];
+    
+    friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", nil];
+    
+    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"Manik's RalleeSIP", nil];
+    
+    called_user= [[NSString alloc] init];
+
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]]];
     
     RalleeReg* middle = [RalleeReg sharedController];
     
     BOOL y = [middle initRalleeSDK:@"myAppKey"];
     
-    if (y) {
+    if (y) 
         NSLog(@"init success");
-    }
     else
         NSLog(@"init failed");
     
     accs2 = [RalleeAccounts sharedController];
     
+    
+    
     accs2.handler = ^(NSDictionary* dict) {
-        NSLog(@"handler : %@",dict);
+       NSLog(@"handler : %@",dict);
+        
+        NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
+        
+        [statusLabel setText:@" I am in handler"];
+        
+       // [statusLabel setText:[dict objectForKey:@"StatusText"]];
+        
     };
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -350,6 +406,7 @@ NSString* fbID;
 - (void)dealloc {
     [callUser release];
     [loginButton release];
+    [statusLabel release];
     [super dealloc];
 }
 @end
