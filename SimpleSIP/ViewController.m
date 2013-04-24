@@ -71,9 +71,44 @@ NSString* fbID;
 - (IBAction)callUser:(id)sender {
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
+<<<<<<< HEAD
+<<<<<<< HEAD
+  
+    //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
+    
+    callUserData cud;
+    
+
+    //cud.called_user = @"100004208564196";
+    //cud.caller_user = @"816784662";
+
+    cud.called_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
+    
+    if ([[callUser text] length] == 0) {
+        cud.caller_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
+    }
+    else {
+        cud.caller_user = [callUser text];
+    }
+    
+    
+=======
+
+    callUserData cud;    
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    //cud.caller_user = @"553998562";
+    
+    if ([[callUser text] length] == 0) 
+        cud.called_user = @"553998562";
+    else
+        cud.called_user = [callUser text];
+    
+>>>>>>> df6352e7fbc7fffaa936d38d38b32cb139ef3aa8
+=======
     callUserData cud;    
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     cud.called_user = [callUser text];
+>>>>>>> fb65094d74daf62d735a27a76963122320a172d6
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
     
