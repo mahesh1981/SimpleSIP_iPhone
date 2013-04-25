@@ -17,6 +17,8 @@
 
 #define fb
 
+//#define thirdParty
+
 //#import "RalleeMiddlewareConnectionController.h"
 
 NSString* kAppId = @"141462222695498";
@@ -46,6 +48,10 @@ NSString* fbID;
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [friends count];
 }
@@ -55,7 +61,7 @@ NSString* fbID;
     static NSString* reUseID = @"Friend";
     
     UITableViewCell *cell = [tableView1 dequeueReusableCellWithIdentifier:reUseID];
-    [cell.imageView setImage:[UIImage imageNamed:@"fbDefault"]];
+    [cell.imageView setImage:[UIImage imageNamed:@"def.jpeg"]];
     
     [cell.textLabel setText:[friends objectAtIndex:indexPath.row]];
     [cell.detailTextLabel setText:[friendsNames objectAtIndex:indexPath.row]];
@@ -77,6 +83,7 @@ NSString* fbID;
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
     
+<<<<<<< HEAD
 //    callUserData cud;
 //    
 //
@@ -98,12 +105,22 @@ NSString* fbID;
     callUserData cud;    
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     //cud.caller_user = @"553998562";
+=======
+    callUserData cud;
     
-    if ([[callUser text] length] == 0) 
-        cud.called_user = @"553998562";
-    else
+
+    //cud.called_user = @"100004208564196";
+    //cud.caller_user = @"816784662";
+
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
+>>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
+    
+    if ([[callUser text] length] == 0)
+        cud.called_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
+    else 
         cud.called_user = [callUser text];
     
+<<<<<<< HEAD
 
 //    callUserData cud;    
 //    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
@@ -111,9 +128,10 @@ NSString* fbID;
 //
 //    cud.sn_type_caller = @"fb";
 //    cud.sn_type_called = @"fb";
-    
-   
-    
+=======
+    cud.sn_type_caller = @"fb";
+    cud.sn_type_called = @"fb";
+>>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
     
     BOOL abc = [voice callUser:cud];
     if (abc)
@@ -281,6 +299,44 @@ NSString* fbID;
     }
 }
 
+#if defined(thirdParty)
+
+- (IBAction)fbLogin:(id)sender {
+   // AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    RalleeReg* ralleeReg = [RalleeReg sharedController];
+    UserAuthenticationData ud;
+    
+
+    ud.first_name = @"Joy";//[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"];
+    ud.last_name = @"Banerjee";//[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"];
+    ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
+    ud.app_ver = @"rallee_2.0";
+    ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
+    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
+    ud.SNPassword = @"noPassword";
+    ud.SNName = @"rt";
+    ud.device_token = @"device_iPhone";
+    
+
+    [statusLabel setText:@"Requesting Middleware for authentication"];
+    [table setHidden:NO];
+    [callButton setHidden:NO];
+    [callUser setHidden:NO];
+    BOOL str = [ralleeReg registerToRallee:ud];
+
+    if (str)
+        NSLog(@"register response : success");
+    else
+        NSLog(@"register response : failure");
+
+}
+
+
+
+#else
+
 - (IBAction)fbLogin:(id)sender {
     [statusLabel setText:@"Facebook Login is in process"];
     
@@ -336,6 +392,11 @@ NSString* fbID;
     
     
 }
+
+
+
+
+#endif
 
 #pragma mark sip start
 
