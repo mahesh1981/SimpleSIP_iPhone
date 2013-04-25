@@ -27,9 +27,7 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 - (BOOL)registerToSIPServer:(accountDetails)acc;
 - (void)processRegState:(NSDictionary *)userInfo;
 //- (void)processRegState:(NSNotification *)notification;
-
 - (BOOL) callUsingNumber:(NSString *)number;
-
 @property (nonatomic, copy) RalleeAccountsHandler handler;
 
 @end

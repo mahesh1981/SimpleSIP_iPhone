@@ -17,6 +17,9 @@ typedef void (^RalleeURLConnectionHandler)(RalleeURLConnection *connection,
 
 @interface RalleeURLConnection : NSURLConnection<NSURLConnectionDataDelegate>
 
+
+
 - (void)cancel;
+
 
 @end

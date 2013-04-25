@@ -28,6 +28,8 @@
     NSString* called_user;
     IBOutlet UITextField* numberField;
     IBOutlet UIButton* dialNum;
+    
+    IBOutlet UILabel *testLabel;
 }
 - (IBAction)fbLogin:(id)sender;
 
@@ -38,5 +40,6 @@
 - (IBAction)dialNumber:(id)sender;
 
 @property (strong, nonatomic) AppDelegate *shared;
+@property (nonatomic, retain) IBOutlet UILabel *testLabel;
 
 @end
