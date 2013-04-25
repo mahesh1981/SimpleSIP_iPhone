@@ -17,6 +17,8 @@
 
 #define fb
 
+//#define thirdParty
+
 //#import "RalleeMiddlewareConnectionController.h"
 
 NSString* kAppId = @"141462222695498";
@@ -261,6 +263,44 @@ NSString* fbID;
     }
 }
 
+#if defined(thirdParty)
+
+- (IBAction)fbLogin:(id)sender {
+   // AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    RalleeReg* ralleeReg = [RalleeReg sharedController];
+    UserAuthenticationData ud;
+    
+
+    ud.first_name = @"Joy";//[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"];
+    ud.last_name = @"Banerjee";//[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"];
+    ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
+    ud.app_ver = @"rallee_2.0";
+    ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
+    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
+    ud.SNPassword = @"noPassword";
+    ud.SNName = @"rt";
+    ud.device_token = @"device_iPhone";
+    
+
+    [statusLabel setText:@"Requesting Middleware for authentication"];
+    [table setHidden:NO];
+    [callButton setHidden:NO];
+    [callUser setHidden:NO];
+    BOOL str = [ralleeReg registerToRallee:ud];
+
+    if (str)
+        NSLog(@"register response : success");
+    else
+        NSLog(@"register response : failure");
+
+}
+
+
+
+#else
+
 - (IBAction)fbLogin:(id)sender {
     [statusLabel setText:@"Facebook Login is in process"];
     
@@ -299,6 +339,11 @@ NSString* fbID;
         [self updateView];
     }];
 }
+
+
+
+
+#endif
 
 #pragma mark sip start
 
