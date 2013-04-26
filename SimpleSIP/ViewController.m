@@ -35,6 +35,8 @@ NSString* fbID;
 @implementation ViewController
 @synthesize shared;
 @synthesize requestConnection;
+@synthesize testLabel;
+
 
 - (IBAction)dialNumber:(id)sender {
     RalleeAccounts* r = [RalleeAccounts sharedController];
@@ -81,6 +83,29 @@ NSString* fbID;
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
     
+<<<<<<< HEAD
+//    callUserData cud;
+//    
+//
+//    //cud.called_user = @"100004208564196";
+//    //cud.caller_user = @"816784662";
+//
+//    cud.called_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
+//    
+//    if ([[callUser text] length] == 0) {
+//        cud.caller_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
+//    }
+//    else {
+//        cud.caller_user = [callUser text];
+//    }
+    
+    
+
+
+    callUserData cud;    
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    //cud.caller_user = @"553998562";
+=======
     callUserData cud;
     
 
@@ -88,14 +113,25 @@ NSString* fbID;
     //cud.caller_user = @"816784662";
 
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
+>>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
     
     if ([[callUser text] length] == 0)
         cud.called_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
     else 
         cud.called_user = [callUser text];
     
+<<<<<<< HEAD
+
+//    callUserData cud;    
+//    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+//    cud.called_user = [callUser text];
+//
+//    cud.sn_type_caller = @"fb";
+//    cud.sn_type_called = @"fb";
+=======
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
+>>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
     
     BOOL abc = [voice callUser:cud];
     if (abc)
@@ -338,6 +374,23 @@ NSString* fbID;
         [statusLabel setText:@"Facebook Login is complete"];
         [self updateView];
     }];
+    
+    
+//    accs2 = [RalleeAccounts sharedController];
+//    
+//    //NSLog(@"before handler");
+//    
+//    accs2.handler = ^(NSDictionary* dict) {
+//        NSLog(@"handler : %@",dict);
+//        
+//        NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
+//        
+//        [self.testLabel setText:@"NEW"];
+//        [testLabel setText:@"Hello"];
+//       
+//    };
+    
+    
 }
 
 
@@ -359,6 +412,11 @@ NSString* fbID;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.testLabel setText:@"Hello"];
+    
+   // NSLog(@"%@ %@", self, testLabel);
+    
     
     [table setHidden:YES];
     [callButton setHidden:YES];
@@ -382,20 +440,44 @@ NSString* fbID;
     else
         NSLog(@"init failed");
     
+    
+    
     accs2 = [RalleeAccounts sharedController];
     
-    
+    //NSLog(@"before handler");
     
     accs2.handler = ^(NSDictionary* dict) {
-       NSLog(@"handler : %@",dict);
+        NSLog(@"handler : %@",dict);
         
         NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
         
-        [statusLabel setText:@" I am in handler"];
+        // NSLog(@"%@ %@", self, testLabel);
         
-       // [statusLabel setText:[dict objectForKey:@"StatusText"]];
         
+        
+        
+        //[self changeStatus];
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            double delayInSeconds = 30.0;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                
+                [self.testLabel setText:@"NEW"];
+                
+                
+                
+            });
+        });
+        
+        
+        
+
     };
+
+    
+    
+    
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -418,6 +500,30 @@ NSString* fbID;
         }
     }
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)changeStatus
+{
+    
+    //[self.testLabel setText:@"Method"];
+    
+//    accs2.handler = ^(NSDictionary* dict) {
+//        NSLog(@"handler : %@",dict);
+//        
+//        //NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
+//        
+//        [self.testLabel setText:@"TEST METHOD"];
+//        
+//        //[self changeStatus];
+//        
+//       
+//        
+//    };
+    
+    
+    
+    [self.testLabel setText:@"TEST METHOD"];
+
 }
 
 - (void)didReceiveMemoryWarning

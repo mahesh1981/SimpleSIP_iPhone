@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeError.m \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeError.h
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeError.m \
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeError.h
