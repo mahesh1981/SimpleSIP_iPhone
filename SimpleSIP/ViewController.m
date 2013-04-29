@@ -35,14 +35,15 @@ NSString* fbID;
 @implementation ViewController
 @synthesize shared;
 @synthesize requestConnection;
-@synthesize testLabel;
 
 
 - (IBAction)dialNumber:(id)sender {
     RalleeAccounts* r = [RalleeAccounts sharedController];
     
-    if ([[numberField text] length] == 0)
-        [r callUsingNumber:@"190"];
+    if ([[numberField text] length] == 0) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No number to dial" message:@"Please enter a number and dial" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
     else
         [r callUsingNumber:[numberField text]];
     
@@ -80,64 +81,24 @@ NSString* fbID;
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
 
-  
-    //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
-    
-<<<<<<< HEAD
-//    callUserData cud;
-//    
-//
-//    //cud.called_user = @"100004208564196";
-//    //cud.caller_user = @"816784662";
-//
-//    cud.called_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
-//    
-//    if ([[callUser text] length] == 0) {
-//        cud.caller_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
-//    }
-//    else {
-//        cud.caller_user = [callUser text];
-//    }
-    
-    
-
-
-    callUserData cud;    
-    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-    //cud.caller_user = @"553998562";
-=======
     callUserData cud;
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     
-
-    //cud.called_user = @"100004208564196";
-    //cud.caller_user = @"816784662";
-
-    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
->>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
-    
-    if ([[callUser text] length] == 0)
-        cud.called_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
-    else 
+    if ([[callUser text] length] == 0){
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No user to call" message:@"Please select a user and call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+    else {
         cud.called_user = [callUser text];
+        cud.sn_type_caller = @"fb";
+        cud.sn_type_called = @"fb";
     
-<<<<<<< HEAD
-
-//    callUserData cud;    
-//    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-//    cud.called_user = [callUser text];
-//
-//    cud.sn_type_caller = @"fb";
-//    cud.sn_type_called = @"fb";
-=======
-    cud.sn_type_caller = @"fb";
-    cud.sn_type_called = @"fb";
->>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
-    
-    BOOL abc = [voice callUser:cud];
-    if (abc)
-        NSLog(@"calling is succesful");
-    else
-        NSLog(@"call is unsuccesful");
+        BOOL abc = [voice callUser:cud];
+        if (abc)
+            NSLog(@"calling is succesful");
+        else
+            NSLog(@"call is unsuccesful");
+    }
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -176,10 +137,8 @@ NSString* fbID;
     ud.device_token = @"device_iPhone";
     
 #endif
-    [statusLabel setText:@"Requesting Middleware for authentication"];
-    [table setHidden:NO];
-    [callButton setHidden:NO];
-    [callUser setHidden:NO];
+    [statusLabel setText:@"Connecting..."];
+   
     BOOL str = [ralleeReg registerToRallee:ud];
     
     //    id str = [middleware registerToRallee:[[NSDictionary alloc] initWithObjectsAndKeys:[[NSDictionary alloc] initWithObjectsAndKeys: [[NSDictionary alloc] initWithObjectsAndKeys:appDelegate.session.accessToken, @"fb", nil], @"access_tokens", [[NSDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%@:%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"],[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]], @"fb",     nil], @"account_info", nil],@"credentials",     [[NSDictionary alloc] initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"], @"first_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], @"last_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"], @"email",     @"Rallee_2.0", @"rallee_ver",     nil], @"data", nil]];
@@ -321,9 +280,7 @@ NSString* fbID;
     
 
     [statusLabel setText:@"Requesting Middleware for authentication"];
-    [table setHidden:NO];
-    [callButton setHidden:NO];
-    [callUser setHidden:NO];
+
     BOOL str = [ralleeReg registerToRallee:ud];
 
     if (str)
@@ -375,22 +332,6 @@ NSString* fbID;
         [self updateView];
     }];
     
-    
-//    accs2 = [RalleeAccounts sharedController];
-//    
-//    //NSLog(@"before handler");
-//    
-//    accs2.handler = ^(NSDictionary* dict) {
-//        NSLog(@"handler : %@",dict);
-//        
-//        NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
-//        
-//        [self.testLabel setText:@"NEW"];
-//        [testLabel setText:@"Hello"];
-//       
-//    };
-    
-    
 }
 
 
@@ -413,7 +354,6 @@ NSString* fbID;
 {
     [super viewDidLoad];
     
-    [self.testLabel setText:@"Hello"];
     
    // NSLog(@"%@ %@", self, testLabel);
     
@@ -421,11 +361,14 @@ NSString* fbID;
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
+    [dialNum setHidden:YES];
+    [numberField setHidden:YES];
+    
     [statusLabel setText:@""];
     
-    friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", nil];
+    friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", @"100005551420166",nil];
     
-    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"Manik's RalleeSIP", nil];
+    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"Manik's RalleeSIP", @"Manik's_New RalleeSIP",nil];
     
     called_user= [[NSString alloc] init];
 
@@ -443,41 +386,33 @@ NSString* fbID;
     
     
     accs2 = [RalleeAccounts sharedController];
-    
     //NSLog(@"before handler");
     
     accs2.handler = ^(NSDictionary* dict) {
-        NSLog(@"handler : %@",dict);
-        
-        NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
-        
-        // NSLog(@"%@ %@", self, testLabel);
+        int status = [[NSString stringWithFormat:@"%@",[dict objectForKey:@"Status"]] intValue];
         
         
-        
-        
-        //[self changeStatus];
+        NSLog(@"handler : %@ status %@",dict, [dict objectForKey:@"StatusText"]);
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            double delayInSeconds = 30.0;
+            double delayInSeconds = 3.0;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                
-                [self.testLabel setText:@"NEW"];
-                
+                if (status == 200) {
+                    [statusLabel setText:[NSString stringWithFormat:@"You are logged in as %@ %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"]]];
+                    [table setHidden:NO];
+                    [callButton setHidden:NO];
+                    [callUser setHidden:NO];
+                    [dialNum setHidden:NO];
+                    [numberField setHidden:NO];
+                }
+                else
+                    [loginButton setHidden:NO];
                 
                 
             });
         });
-        
-        
-        
-
     };
-
-    
-    
-    
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -504,26 +439,7 @@ NSString* fbID;
 
 -(void)changeStatus
 {
-    
-    //[self.testLabel setText:@"Method"];
-    
-//    accs2.handler = ^(NSDictionary* dict) {
-//        NSLog(@"handler : %@",dict);
-//        
-//        //NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
-//        
-//        [self.testLabel setText:@"TEST METHOD"];
-//        
-//        //[self changeStatus];
-//        
-//       
-//        
-//    };
-    
-    
-    
-    [self.testLabel setText:@"TEST METHOD"];
-
+    [statusLabel setText:@"TEST METHOD"];
 }
 
 - (void)didReceiveMemoryWarning
