@@ -25,14 +25,7 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 
 typedef void(^RalleeCallHandler)(NSInteger state);
 
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
->>>>>>> a2c9ab9c2da8687f1d4cb362cb40be2cfe3b5a80
 @interface RalleeAccounts : NSObject {
     accountDetails acct;
 }
@@ -46,16 +39,10 @@ typedef void(^RalleeCallHandler)(NSInteger state);
 - (BOOL) callUsingNumber:(NSString *)number;
 - (void)processCallState:(NSNotification *)notification;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 - (BOOL) answerCall;
 - (BOOL) endCall;
 - (BOOL) cancelCall;
-=======
->>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
->>>>>>> a2c9ab9c2da8687f1d4cb362cb40be2cfe3b5a80
 
 - (void)openWithCompletionHandler:(RalleeCallHandler)handler1;
 
@@ -64,10 +51,6 @@ typedef void(^RalleeCallHandler)(NSInteger state);
 @property (nonatomic, copy) RalleeAccountsHandler handler;
 
 @property (nonatomic, copy) RalleeCallHandler callHandler;
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
 
 
 @end
