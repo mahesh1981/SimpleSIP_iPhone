@@ -18,11 +18,13 @@ typedef struct accountDetails {
 
 typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 
+
 //typedef void(^RalleeCallHandler)(NSInteger state);
 
 @protocol CallHandlerDelegate;
 
 typedef void(^RalleeCallHandler)(NSInteger state);
+
 
 @interface RalleeAccounts : NSObject {
     accountDetails acct;
@@ -38,13 +40,14 @@ typedef void(^RalleeCallHandler)(NSInteger state);
 - (void)processCallState:(NSNotification *)notification;
 
 
+- (BOOL) answerCall;
+- (BOOL) endCall;
+- (BOOL) cancelCall;
 
 - (void)openWithCompletionHandler:(RalleeCallHandler)handler1;
 
 
-
 @property (nonatomic, strong) id<CallHandlerDelegate> delegate;
-
 @property (nonatomic, copy) RalleeAccountsHandler handler;
 
 @property (nonatomic, copy) RalleeCallHandler callHandler;
