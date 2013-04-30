@@ -104,12 +104,9 @@
 <color key="backgroundColor" red="1" green="0.81237462675016792" blue="0.26226345212954938" alpha="1" colorSpace="calibratedRGB"/>
 <constraints>
 
-<constraint firstAttribute="height" constant="32" id="Wt2-yF-Eyj"/>
+<constraint firstAttribute="height" constant="32" id="6Yt-Rk-tWR"/>
 </constraints>
-<fontDescription key="fontDescription" type="system" pointSize="20"/>
-
 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-
 <color key="textColor" red="0.047896074970000001" green="0.61432465400000003" blue="0.64179262910000001" alpha="1" colorSpace="calibratedRGB"/>
 <nil key="highlightedColor"/>
 </label>
@@ -174,24 +171,6 @@
 <constraint firstItem="dDS-NV-isG" firstAttribute="baseline" secondItem="6L3-5b-bwV" secondAttribute="baseline" type="default" id="nNs-Ab-6SD"/>
 <constraint firstItem="QWN-EV-n1R" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="31" id="pp5-R7-8V1"/>
 <constraint firstItem="p41-2P-Fa7" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="qXi-1k-8TQ"/>
-
-<constraint firstItem="wbO-wY-si5" firstAttribute="bottom" secondItem="Bdd-Lh-YIK" secondAttribute="bottom" type="default" id="2gp-Tw-UaV"/>
-<constraint firstItem="fNM-v7-h58" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="50" id="2zt-kQ-ji9"/>
-<constraint firstItem="fNM-v7-h58" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="89" id="5i8-bx-bme"/>
-<constraint firstAttribute="trailing" secondItem="4zr-MA-Kp6" secondAttribute="trailing" constant="47" id="9Xx-tI-tm6"/>
-<constraint firstItem="Y96-vu-leA" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="TVy-Sw-jOf"/>
-<constraint firstItem="aNP-cb-8pP" firstAttribute="baseline" secondItem="fNM-v7-h58" secondAttribute="baseline" type="default" id="Vax-xc-Va7"/>
-<constraint firstItem="QWN-EV-n1R" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="45" id="a79-6c-pk4"/>
-<constraint firstItem="QWN-EV-n1R" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="14" id="avX-9A-da9"/>
-<constraint firstItem="p41-2P-Fa7" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="31" id="cnx-IP-9qz"/>
-<constraint firstItem="wbO-wY-si5" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="dFn-zq-JWe"/>
-<constraint firstAttribute="trailing" secondItem="aNP-cb-8pP" secondAttribute="trailing" constant="34" id="fg4-f6-EfC"/>
-<constraint firstItem="Y96-vu-leA" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" type="default" id="jHQ-lt-C2e"/>
-<constraint firstItem="wbO-wY-si5" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="jj9-kM-58y"/>
-<constraint firstItem="p41-2P-Fa7" firstAttribute="centerX" secondItem="Y96-vu-leA" secondAttribute="centerX" type="default" id="m0L-8M-c0o"/>
-
-<constraint firstItem="4zr-MA-Kp6" firstAttribute="baseline" secondItem="QWN-EV-n1R" secondAttribute="baseline" type="default" id="s5v-GA-T4D"/>
-<constraint firstItem="Y96-vu-leA" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="veP-FH-kdZ"/>
 </constraints>
 </view>
 <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -199,10 +178,7 @@
 <outlet property="answerButton" destination="dDS-NV-isG" id="2hJ-kh-6hm"/>
 <outlet property="callButton" destination="fNM-v7-h58" id="f2V-Gr-tun"/>
 <outlet property="callUser" destination="QWN-EV-n1R" id="dhH-zQ-zCN"/>
-
-
 <outlet property="dialNum" destination="aNP-cb-8pP" id="632-1G-QQK"/>
-
 <outlet property="loginButton" destination="p41-2P-Fa7" id="Uvr-5T-dhG"/>
 <outlet property="numberField" destination="4zr-MA-Kp6" id="Hcu-MB-myT"/>
 <outlet property="rejectButton" destination="6L3-5b-bwV" id="P4m-YM-Gq0"/>
@@ -435,7 +411,6 @@
 <resources>
 <image name="fb.png" width="300" height="65"/>
 </resources>
-
 <classes>
 <class className="MainPage" superclassName="UIViewController">
 <source key="sourceIdentifier" type="project" relativePath="./Classes/MainPage.h"/>
@@ -444,7 +419,6 @@
 <relationship kind="action" name="answerPressed:"/>
 
 <relationship kind="action" name="call:"/>
-
 <relationship kind="action" name="callNumber:"/>
 <relationship kind="action" name="refreshBuddies:"/>
 <relationship kind="action" name="sendMessage:"/>
@@ -475,13 +449,10 @@
 <relationship kind="outlet" name="rejectButton" candidateClass="UIButton"/>
 <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-
 <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
-
 </relationships>
 </class>
 </classes>
-
 <simulatedMetricsContainer key="defaultSimulatedMetrics">
 <simulatedStatusBarMetrics key="statusBar"/>
 <simulatedOrientationMetrics key="orientation"/>

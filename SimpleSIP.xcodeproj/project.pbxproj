@@ -16,7 +16,6 @@
 		4E3241A616F73654000D9264 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A416F73654000D9264 /* Accounts.framework */; };
 		4E3241A716F73654000D9264 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A516F73654000D9264 /* AdSupport.framework */; };
 		4E3241A916F7369E000D9264 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3241A816F7369E000D9264 /* FacebookSDK.framework */; };
-		4E572EEA172FC49800D000B3 /* newCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E572EE9172FC49800D000B3 /* newCheck.m */; };
 		4E5BE3BF172E8B3300C29A12 /* bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5BE3BE172E8B3300C29A12 /* bg2.png */; };
 		4E5BE3C1172E8C1600C29A12 /* bg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E5BE3C0172E8C1600C29A12 /* bg3.jpg */; };
 		4E5BE3C3172E8FCC00C29A12 /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5BE3C2172E8FCC00C29A12 /* fb.png */; };
@@ -53,8 +52,6 @@
 		4E3241A416F73654000D9264 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		4E3241A516F73654000D9264 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4E3241A816F7369E000D9264 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = Others/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		4E572EE8172FC49800D000B3 /* newCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newCheck.h; sourceTree = "<group>"; };
-		4E572EE9172FC49800D000B3 /* newCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newCheck.m; sourceTree = "<group>"; };
 		4E5BE3BE172E8B3300C29A12 /* bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg2.png; path = SimpleSIP/bg2.png; sourceTree = "<group>"; };
 		4E5BE3C0172E8C1600C29A12 /* bg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg3.jpg; path = SimpleSIP/bg3.jpg; sourceTree = "<group>"; };
 		4E5BE3C2172E8FCC00C29A12 /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fb.png; path = SimpleSIP/fb.png; sourceTree = "<group>"; };
@@ -122,8 +119,6 @@
 				4E5BE3BE172E8B3300C29A12 /* bg2.png */,
 				4E5BE3C2172E8FCC00C29A12 /* fb.png */,
 				4E02BBA51712EF82000ED168 /* RalleeSDK.h */,
-				4E572EE8172FC49800D000B3 /* newCheck.h */,
-				4E572EE9172FC49800D000B3 /* newCheck.m */,
 				4E629E5216D358180058EC35 /* SimpleSIP */,
 				4E629E4B16D358180058EC35 /* Frameworks */,
 				4E629E4A16D358180058EC35 /* Products */,
@@ -272,7 +267,6 @@
 				4E629E5916D358180058EC35 /* main.m in Sources */,
 				4E629E5D16D358180058EC35 /* AppDelegate.m in Sources */,
 				4E629E6916D358180058EC35 /* ViewController.m in Sources */,
-				4E572EEA172FC49800D000B3 /* newCheck.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

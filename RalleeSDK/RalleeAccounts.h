@@ -33,7 +33,6 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 //- (void)processRegState:(NSNotification *)notification;
 
 - (BOOL) callUsingNumber:(NSString *)number;
-<<<<<<< HEAD
 - (void)processCallState:(NSNotification *)notification;
 
 //- (void)openWithCompletionHandler:(NSInteger)states;
@@ -41,11 +40,6 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 
 @property (nonatomic, strong) id<CallHandlerDelegate> delegate;
 
-=======
-
-
-
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
 @property (nonatomic, copy) RalleeAccountsHandler handler;
 //@property (nonatomic, copy) RalleeCallHandler callHandler;
 
