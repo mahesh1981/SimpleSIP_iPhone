@@ -10,9 +10,14 @@
 #import "Rallee.h"
 #import "RalleeJSON.h"
 #import "RalleeRequest.h"
+<<<<<<< HEAD
 
 #include "RalleeAccounts.h"
 
+=======
+#import <UIKit/UIKit.h>
+#include "RalleeAccounts.h"
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
 
 @interface RalleeVoiceCall : NSObject {
     

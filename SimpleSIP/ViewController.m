@@ -39,16 +39,22 @@ NSString* fbID;
     RalleeAccounts* r = [RalleeAccounts sharedController];
     
 
+<<<<<<< HEAD
     NSLog(@"%@", [numberField text]);
     
     if ([[numberField text] length] == 0)
         [r callUsingNumber:@"190"];
 
+=======
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     if ([[numberField text] length] == 0) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No number to dial" message:@"Please enter a number and dial" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     else
         [r callUsingNumber:[numberField text]];
     
@@ -86,6 +92,7 @@ NSString* fbID;
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
 
+<<<<<<< HEAD
 
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
@@ -174,6 +181,11 @@ NSString* fbID;
 //        };
 
     
+=======
+    callUserData cud;
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     if ([[callUser text] length] == 0){
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No user to call" message:@"Please select a user and call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
@@ -196,10 +208,11 @@ NSString* fbID;
             UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No proper id to call" message:@"Please select a user or enter proper facebook id of the user to call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
             [alert show];
         }
-        
-       
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -427,8 +440,11 @@ NSString* fbID;
         [self updateView];
     }];
     
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
 //    accs2 = [RalleeAccounts sharedController];
 //    
 //    //NSLog(@"before handler");
@@ -490,6 +506,7 @@ NSString* fbID;
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
+<<<<<<< HEAD
 
     
     
@@ -500,6 +517,12 @@ NSString* fbID;
     [numberField setHidden:YES];
 
     
+=======
+    [rejectButton setHidden:YES];
+    [answerButton setHidden:YES];
+    [dialNumberButton setHidden:YES];
+    [numberField setHidden:YES];
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     [statusLabel setText:@""];
     
     friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", @"100005551420166",nil];
@@ -526,6 +549,7 @@ NSString* fbID;
    // [callButton setHidden:YES];
     
     accs2 = [RalleeAccounts sharedController];
+<<<<<<< HEAD
 
     
     accs2.delegate=self;
@@ -533,6 +557,8 @@ NSString* fbID;
     //NSLog(@"before handler");
     
     
+=======
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     
     accs2.handler = ^(NSDictionary* dict) {
         int status = [[NSString stringWithFormat:@"%@",[dict objectForKey:@"Status"]] intValue];
@@ -549,19 +575,32 @@ NSString* fbID;
                     [table setHidden:NO];
                     [callButton setHidden:NO];
                     [callUser setHidden:NO];
+<<<<<<< HEAD
                    // [dialNum setHidden:NO];
+=======
+                    [dialNumberButton setHidden:NO];
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
                     [numberField setHidden:NO];
                 }
                 else
                     [loginButton setHidden:NO];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
                 
                 
             });
             
             
         });
+<<<<<<< HEAD
 
+=======
+        
+    
+        //dispatch_queue_t main_queue = dispatch_get_main_queue();
+>>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     };
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
