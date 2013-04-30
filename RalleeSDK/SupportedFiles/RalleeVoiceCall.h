@@ -10,7 +10,16 @@
 #import "Rallee.h"
 #import "RalleeJSON.h"
 #import "RalleeRequest.h"
+<<<<<<< HEAD
+#import <UIKit/UIKit.h>
+
+
+
+
+
+=======
 #include "RalleeAccounts.h"
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
 
 @interface RalleeVoiceCall : NSObject {
     
@@ -23,5 +32,9 @@
 
 - (BOOL) answerCall;
 
+
+
+
++ (void)processCallState:(NSNotification *)notification;
 
 @end

@@ -38,10 +38,17 @@ NSString* fbID;
 - (IBAction)dialNumber:(id)sender {
     RalleeAccounts* r = [RalleeAccounts sharedController];
     
+<<<<<<< HEAD
+    NSLog(@"%@", [numberField text]);
+    
+    if ([[numberField text] length] == 0)
+        [r callUsingNumber:@"190"];
+=======
     if ([[numberField text] length] == 0) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No number to dial" message:@"Please enter a number and dial" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     else
         [r callUsingNumber:[numberField text]];
     
@@ -79,9 +86,99 @@ NSString* fbID;
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
 
+<<<<<<< HEAD
+  
+    //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
+    
+
+//    callUserData cud;
+//    
+//
+//    //cud.called_user = @"100004208564196";
+//    //cud.caller_user = @"816784662";
+//
+//    cud.called_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
+//    
+//    if ([[callUser text] length] == 0) {
+//        cud.caller_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
+//    }
+//    else {
+//        cud.caller_user = [callUser text];
+//    }
+    
+    
+
+=======
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     callUserData cud;
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     
+<<<<<<< HEAD
+
+    //cud.called_user = @"100004208564196";
+    //cud.caller_user = @"816784662";
+
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
+
+    if ([[callUser text] length] == 0)
+        cud.called_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
+    else 
+        cud.called_user = [callUser text];
+    
+
+    cud.sn_type_caller = @"fb";
+    cud.sn_type_called = @"fb";
+
+    BOOL abc = [voice callUser:cud];
+    if (abc)
+        NSLog(@"calling is succesful");
+    else
+        NSLog(@"call is unsuccesful");
+    
+    
+//    accs2.callHandler = ^(NSInteger state) {
+//                    
+//        NSLog(@"Call States :: %d",  state);
+//        
+//        
+//        
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            double delayInSeconds = 0.3;
+//            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+//            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//                
+//                // [self.testLabel setText:@"NEW"];
+//                
+//                //[callButton setHidden:YES];
+//                
+//                
+//                [table setHidden:YES];
+//                [callButton setHidden:YES];
+//                [callUser setHidden:YES];
+//                [numberField setHidden:YES];
+//                [dialNum setHidden:YES];
+//                
+//                
+//                [rejectButton setHidden:NO];
+//                [answerButton setHidden:NO];
+//                
+//                
+//                
+//            });
+//            
+//            
+//        });
+//        
+//        
+//        
+//        
+//       
+//        
+//        
+//        };
+
+    
+=======
     if ([[callUser text] length] == 0){
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No user to call" message:@"Please select a user and call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
@@ -107,6 +204,7 @@ NSString* fbID;
         
        
     }
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -334,10 +432,25 @@ NSString* fbID;
         [self updateView];
     }];
     
+<<<<<<< HEAD
+    
+//    accs2 = [RalleeAccounts sharedController];
+//    
+//    //NSLog(@"before handler");
+//    
+//    accs2.handler = ^(NSDictionary* dict) {
+//        NSLog(@"handler : %@",dict);
+//        
+//        NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
+//        
+//        [self.testLabel setText:@"NEW"];
+//        [testLabel setText:@"Hello"];
+//       
+//    };
+    
+=======
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
 }
-
-
-
 
 #endif
 
@@ -384,8 +497,15 @@ NSString* fbID;
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
+<<<<<<< HEAD
+    
+    
+    [rejectButton setHidden:YES];
+    [answerButton setHidden:YES];
+=======
     [dialNum setHidden:YES];
     [numberField setHidden:YES];
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     
     [statusLabel setText:@""];
     
@@ -410,9 +530,33 @@ NSString* fbID;
     else
         NSLog(@"init failed");
     
-    
+   // [callButton setHidden:YES];
     
     accs2 = [RalleeAccounts sharedController];
+<<<<<<< HEAD
+    
+    accs2.delegate=self;
+    
+    //NSLog(@"before handler");
+    
+    accs2.handler = ^(NSDictionary* dict) {
+        NSLog(@"handler : %@",dict);
+        
+        NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
+        
+        // NSLog(@"%@ %@", self, testLabel);
+        
+        //[self changeStatus];
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            double delayInSeconds = 0.3;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                
+               // [self.testLabel setText:@"NEW"];
+                
+                 //[callButton setHidden:YES];
+=======
     //NSLog(@"before handler");
     
     accs2.handler = ^(NSDictionary* dict) {
@@ -435,10 +579,20 @@ NSString* fbID;
                 }
                 else
                     [loginButton setHidden:NO];
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
                 
                 
             });
+            
+            
         });
+<<<<<<< HEAD
+        
+    
+        //dispatch_queue_t main_queue = dispatch_get_main_queue();
+
+=======
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     };
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -463,6 +617,52 @@ NSString* fbID;
     }
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)openWithCallBackHandler:(NSDictionary*)notificationDict;
+{
+    NSLog(@"Completion Handler Called");
+    
+    NSLog(@"%d",  [[notificationDict objectForKey: @"State"] intValue]);
+    
+    
+    
+    
+    
+    
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        double delayInSeconds = 0.3;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            
+            // [self.testLabel setText:@"NEW"];
+            
+            //[callButton setHidden:YES];
+            
+            [statusLabel setText:@"Incoming Call Connected"];
+            
+            
+            [table setHidden:YES];
+            [callButton setHidden:YES];
+            [callUser setHidden:YES];
+            [numberField setHidden:YES];
+            [dialNumberButton setHidden:YES];
+            
+            
+            [rejectButton setHidden:NO];
+            [answerButton setHidden:NO];
+            
+            
+        });
+        
+        
+    });
+    
+    
+
+}
+
+
 
 -(void)changeStatus
 {
