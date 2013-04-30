@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xd9-yV-o8P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Xd9-yV-o8P">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -103,15 +103,9 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Connecting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y96-vu-leA">
                                 <color key="backgroundColor" red="1" green="0.81237462675016792" blue="0.26226345212954938" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-<<<<<<< HEAD
-                                    <constraint firstAttribute="height" constant="32" id="Wt2-yF-Eyj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-=======
                                     <constraint firstAttribute="height" constant="32" id="6Yt-Rk-tWR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
                                 <color key="textColor" red="0.047896074970000001" green="0.61432465400000003" blue="0.64179262910000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,10 +122,9 @@
                                     <action selector="dialNumber:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="6tI-Bp-uzI"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6L3-5b-bwV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM1-p7-XR4">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="kDh-ko-527"/>
+                                    <constraint firstAttribute="width" constant="142" id="Hcq-1c-npJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Reject">
@@ -141,10 +134,13 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rejectCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="mdJ-1s-Cnd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDS-NV-isG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-ry-hNe">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="33t-DF-ecz"/>
+                                    <constraint firstAttribute="width" constant="137" id="AWF-6h-aT1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Answer">
@@ -154,65 +150,44 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="m4J-0Y-4Ir"/>
+                                </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aNP-cb-8pP" firstAttribute="leading" secondItem="dDS-NV-isG" secondAttribute="leading" type="default" id="9CI-qN-jXC"/>
-                            <constraint firstItem="Y96-vu-leA" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="9Qw-5C-8aa"/>
-                            <constraint firstAttribute="bottom" secondItem="QWN-EV-n1R" secondAttribute="bottom" constant="93" id="9mX-KE-8q6"/>
-                            <constraint firstItem="6L3-5b-bwV" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="2" id="IhT-2T-Nc5"/>
-                            <constraint firstAttribute="trailing" secondItem="4zr-MA-Kp6" secondAttribute="trailing" constant="53" id="KpZ-S8-mkn"/>
-                            <constraint firstAttribute="bottom" secondItem="fNM-v7-h58" secondAttribute="bottom" constant="24" id="M0i-pO-VfP"/>
-                            <constraint firstAttribute="bottom" secondItem="6L3-5b-bwV" secondAttribute="bottom" constant="123" id="Nza-4n-O0x"/>
-                            <constraint firstItem="p41-2P-Fa7" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="PKn-Si-Dl8"/>
-                            <constraint firstItem="QWN-EV-n1R" firstAttribute="centerX" secondItem="fNM-v7-h58" secondAttribute="centerX" type="default" id="PLN-Pc-y58"/>
-                            <constraint firstItem="aNP-cb-8pP" firstAttribute="baseline" secondItem="fNM-v7-h58" secondAttribute="baseline" type="default" id="Vax-xc-Va7"/>
-                            <constraint firstItem="wbO-wY-si5" firstAttribute="top" secondItem="Y96-vu-leA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Xub-Ur-Tsk"/>
-                            <constraint firstItem="p41-2P-Fa7" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="38" id="Y5e-h4-kq0"/>
-                            <constraint firstItem="wbO-wY-si5" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="dFn-zq-JWe"/>
-                            <constraint firstItem="Y96-vu-leA" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" type="default" id="jHQ-lt-C2e"/>
-                            <constraint firstItem="wbO-wY-si5" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="jj9-kM-58y"/>
-                            <constraint firstItem="dDS-NV-isG" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="k4S-56-6ih"/>
-                            <constraint firstItem="dDS-NV-isG" firstAttribute="baseline" secondItem="6L3-5b-bwV" secondAttribute="baseline" type="default" id="nNs-Ab-6SD"/>
-                            <constraint firstItem="QWN-EV-n1R" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="31" id="pp5-R7-8V1"/>
-                            <constraint firstItem="p41-2P-Fa7" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="qXi-1k-8TQ"/>
-=======
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="bottom" secondItem="Bdd-Lh-YIK" secondAttribute="bottom" type="default" id="2gp-Tw-UaV"/>
                             <constraint firstItem="fNM-v7-h58" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="50" id="2zt-kQ-ji9"/>
+                            <constraint firstItem="Jed-ry-hNe" firstAttribute="centerX" secondItem="4zr-MA-Kp6" secondAttribute="centerX" type="default" id="5ej-pz-oKp"/>
                             <constraint firstItem="fNM-v7-h58" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="89" id="5i8-bx-bme"/>
-                            <constraint firstAttribute="trailing" secondItem="4zr-MA-Kp6" secondAttribute="trailing" constant="47" id="9Xx-tI-tm6"/>
+                            <constraint firstItem="nM1-p7-XR4" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="123" id="BMC-kf-kdu"/>
+                            <constraint firstItem="Jed-ry-hNe" firstAttribute="trailing" secondItem="p41-2P-Fa7" secondAttribute="trailing" type="default" id="GIW-g1-6h1"/>
+                            <constraint firstItem="QWN-EV-n1R" firstAttribute="trailing" secondItem="nM1-p7-XR4" secondAttribute="trailing" type="default" id="LCx-es-MpP"/>
+                            <constraint firstItem="Jed-ry-hNe" firstAttribute="leading" secondItem="aNP-cb-8pP" secondAttribute="leading" type="default" id="SiZ-ix-Ig1"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="TVy-Sw-jOf"/>
                             <constraint firstItem="aNP-cb-8pP" firstAttribute="baseline" secondItem="fNM-v7-h58" secondAttribute="baseline" type="default" id="Vax-xc-Va7"/>
                             <constraint firstItem="QWN-EV-n1R" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="45" id="a79-6c-pk4"/>
                             <constraint firstItem="QWN-EV-n1R" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="14" id="avX-9A-da9"/>
                             <constraint firstItem="p41-2P-Fa7" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="31" id="cnx-IP-9qz"/>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="dFn-zq-JWe"/>
-                            <constraint firstAttribute="trailing" secondItem="aNP-cb-8pP" secondAttribute="trailing" constant="34" id="fg4-f6-EfC"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" type="default" id="jHQ-lt-C2e"/>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="jj9-kM-58y"/>
                             <constraint firstItem="p41-2P-Fa7" firstAttribute="centerX" secondItem="Y96-vu-leA" secondAttribute="centerX" type="default" id="m0L-8M-c0o"/>
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
                             <constraint firstItem="4zr-MA-Kp6" firstAttribute="baseline" secondItem="QWN-EV-n1R" secondAttribute="baseline" type="default" id="s5v-GA-T4D"/>
+                            <constraint firstItem="Jed-ry-hNe" firstAttribute="baseline" secondItem="nM1-p7-XR4" secondAttribute="baseline" type="default" id="vZe-BV-Ct1"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="veP-FH-kdZ"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="answerButton" destination="dDS-NV-isG" id="2hJ-kh-6hm"/>
+                        <outlet property="answerButton" destination="Jed-ry-hNe" id="ypg-WP-Mi4"/>
                         <outlet property="callButton" destination="fNM-v7-h58" id="f2V-Gr-tun"/>
                         <outlet property="callUser" destination="QWN-EV-n1R" id="dhH-zQ-zCN"/>
-<<<<<<< HEAD
-                        <outlet property="dialNumberButton" destination="aNP-cb-8pP" id="63A-8Z-VyR"/>
-=======
-                        <outlet property="dialNum" destination="aNP-cb-8pP" id="632-1G-QQK"/>
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
+                        <outlet property="dialNumberButton" destination="aNP-cb-8pP" id="PUT-R5-HcH"/>
                         <outlet property="loginButton" destination="p41-2P-Fa7" id="Uvr-5T-dhG"/>
                         <outlet property="numberField" destination="4zr-MA-Kp6" id="Hcu-MB-myT"/>
-                        <outlet property="rejectButton" destination="6L3-5b-bwV" id="P4m-YM-Gq0"/>
+                        <outlet property="rejectButton" destination="nM1-p7-XR4" id="XkX-tW-RMr"/>
                         <outlet property="statusLabel" destination="Y96-vu-leA" id="6KV-d9-YLC"/>
                         <outlet property="table" destination="wbO-wY-si5" id="VRZ-ob-6Cx"/>
                         <segue destination="QNJ-yx-Fz7" kind="modal" identifier="Login" id="eKn-iR-5Wd"/>
@@ -221,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ere-dM-w32" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-182" y="-697"/>
+            <point key="canvasLocation" x="-69" y="-699"/>
         </scene>
         <!--Main Page-->
         <scene sceneID="3eS-Xd-cH2">
@@ -448,10 +423,7 @@
             <relationships>
                 <relationship kind="action" name="addBuddy:"/>
                 <relationship kind="action" name="answerPressed:"/>
-<<<<<<< HEAD
                 <relationship kind="action" name="call:"/>
-=======
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
                 <relationship kind="action" name="callNumber:"/>
                 <relationship kind="action" name="refreshBuddies:"/>
                 <relationship kind="action" name="sendMessage:"/>
@@ -470,9 +442,11 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="answerCall:"/>
                 <relationship kind="action" name="callUser:"/>
                 <relationship kind="action" name="dialNumber:"/>
                 <relationship kind="action" name="fbLogin:"/>
+                <relationship kind="action" name="rejectCall:"/>
                 <relationship kind="outlet" name="answerButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callUser" candidateClass="UITextField"/>
@@ -482,10 +456,6 @@
                 <relationship kind="outlet" name="rejectButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-<<<<<<< HEAD
-                <relationship kind="outlet" name="testLabel" candidateClass="UILabel"/>
-=======
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
             </relationships>
         </class>
     </classes>

@@ -1,10 +1,10 @@
 dependencies: \
-<<<<<<< HEAD
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeVoiceCall.m \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeVoiceCall.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/Rallee.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeJSON.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h \
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeAccounts.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJSON.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonParser.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonBase.h \
@@ -215,15 +215,3 @@ dependencies: \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/pjproject-device/pjlib/include/pj/rbtree.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/pjproject-device/pjlib/include/pj/sock_select.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/pjproject-device/pjlib/include/pj/unicode.h
-=======
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeVoiceCall.m \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeVoiceCall.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/Rallee.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeJSON.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeAccounts.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJSON.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonParser.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonBase.h \
-  /Users/techlites/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/JSON/SBJsonWriter.h
->>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a

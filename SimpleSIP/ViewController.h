@@ -43,6 +43,9 @@
 
 - (IBAction)dialNumber:(id)sender;
 
+-(IBAction)answerCall:(id)sender;
+-(IBAction)rejectCall:(id)sender;
+
 @property (strong, nonatomic) AppDelegate *shared;
 
 @end
