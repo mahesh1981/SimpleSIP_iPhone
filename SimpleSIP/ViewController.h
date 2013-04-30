@@ -13,13 +13,17 @@
 
 
 
-@interface ViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>{
+@interface ViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, CallHandlerDelegate>{
 
     IBOutlet UILabel *statusLabel;
     IBOutlet UITableView* table;
     IBOutlet UITextField *callUser;
     IBOutlet UIButton *loginButton;
     IBOutlet UIButton* callButton;
+    
+    IBOutlet UIButton *rejectButton;
+    IBOutlet UIButton *answerButton;
+    
     AppDelegate *shared;
     
     RalleeAccounts* accs2;
@@ -27,7 +31,7 @@
     NSMutableArray* friendsNames;
     NSString* called_user;
     IBOutlet UITextField* numberField;
-    IBOutlet UIButton* dialNum;
+    IBOutlet UIButton* dialNumberButton;
     
     IBOutlet UILabel *testLabel;
 }

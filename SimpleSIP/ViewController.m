@@ -41,6 +41,8 @@ NSString* fbID;
 - (IBAction)dialNumber:(id)sender {
     RalleeAccounts* r = [RalleeAccounts sharedController];
     
+    NSLog(@"%@", [numberField text]);
+    
     if ([[numberField text] length] == 0)
         [r callUsingNumber:@"190"];
     else
@@ -83,7 +85,7 @@ NSString* fbID;
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
     
-<<<<<<< HEAD
+
 //    callUserData cud;
 //    
 //
@@ -101,11 +103,6 @@ NSString* fbID;
     
     
 
-
-    callUserData cud;    
-    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-    //cud.caller_user = @"553998562";
-=======
     callUserData cud;
     
 
@@ -113,31 +110,65 @@ NSString* fbID;
     //cud.caller_user = @"816784662";
 
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];//@"553998562";
->>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
-    
+
     if ([[callUser text] length] == 0)
         cud.called_user = @"100004208564196";//@"100004208564196";//@"10000573052003";//
     else 
         cud.called_user = [callUser text];
     
-<<<<<<< HEAD
 
-//    callUserData cud;    
-//    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-//    cud.called_user = [callUser text];
-//
-//    cud.sn_type_caller = @"fb";
-//    cud.sn_type_called = @"fb";
-=======
     cud.sn_type_caller = @"fb";
     cud.sn_type_called = @"fb";
->>>>>>> 01ac99df74cf97669c0f9b5d049e025cd9ea3202
-    
+
     BOOL abc = [voice callUser:cud];
     if (abc)
         NSLog(@"calling is succesful");
     else
         NSLog(@"call is unsuccesful");
+    
+    
+//    accs2.callHandler = ^(NSInteger state) {
+//                    
+//        NSLog(@"Call States :: %d",  state);
+//        
+//        
+//        
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            double delayInSeconds = 0.3;
+//            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+//            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//                
+//                // [self.testLabel setText:@"NEW"];
+//                
+//                //[callButton setHidden:YES];
+//                
+//                
+//                [table setHidden:YES];
+//                [callButton setHidden:YES];
+//                [callUser setHidden:YES];
+//                [numberField setHidden:YES];
+//                [dialNum setHidden:YES];
+//                
+//                
+//                [rejectButton setHidden:NO];
+//                [answerButton setHidden:NO];
+//                
+//                
+//                
+//            });
+//            
+//            
+//        });
+//        
+//        
+//        
+//        
+//       
+//        
+//        
+//        };
+
+    
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -390,11 +421,7 @@ NSString* fbID;
 //       
 //    };
     
-    
 }
-
-
-
 
 #endif
 
@@ -421,11 +448,16 @@ NSString* fbID;
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
+    
+    
+    [rejectButton setHidden:YES];
+    [answerButton setHidden:YES];
+    
     [statusLabel setText:@""];
     
-    friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", nil];
+    friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", @"100005551420166",nil];
     
-    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"Manik's RalleeSIP", nil];
+    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"Manik's RalleeSIP", @"Manik's_New RalleeSIP",nil];
     
     called_user= [[NSString alloc] init];
 
@@ -440,9 +472,11 @@ NSString* fbID;
     else
         NSLog(@"init failed");
     
-    
+   // [callButton setHidden:YES];
     
     accs2 = [RalleeAccounts sharedController];
+    
+    accs2.delegate=self;
     
     //NSLog(@"before handler");
     
@@ -453,25 +487,25 @@ NSString* fbID;
         
         // NSLog(@"%@ %@", self, testLabel);
         
-        
-        
-        
         //[self changeStatus];
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            double delayInSeconds = 30.0;
+            double delayInSeconds = 0.3;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 
-                [self.testLabel setText:@"NEW"];
+               // [self.testLabel setText:@"NEW"];
                 
+                 //[callButton setHidden:YES];
                 
                 
             });
+            
+            
         });
         
-        
-        
+    
+        //dispatch_queue_t main_queue = dispatch_get_main_queue();
 
     };
 
@@ -501,6 +535,52 @@ NSString* fbID;
     }
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void)openWithCallBackHandler:(NSDictionary*)notificationDict;
+{
+    NSLog(@"Completion Handler Called");
+    
+    NSLog(@"%d",  [[notificationDict objectForKey: @"State"] intValue]);
+    
+    
+    
+    
+    
+    
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        double delayInSeconds = 0.3;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            
+            // [self.testLabel setText:@"NEW"];
+            
+            //[callButton setHidden:YES];
+            
+            [statusLabel setText:@"Incoming Call Connected"];
+            
+            
+            [table setHidden:YES];
+            [callButton setHidden:YES];
+            [callUser setHidden:YES];
+            [numberField setHidden:YES];
+            [dialNumberButton setHidden:YES];
+            
+            
+            [rejectButton setHidden:NO];
+            [answerButton setHidden:NO];
+            
+            
+        });
+        
+        
+    });
+    
+    
+
+}
+
+
 
 -(void)changeStatus
 {

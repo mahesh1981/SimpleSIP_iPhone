@@ -208,4 +208,7 @@ dependencies: \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/pjproject-device/pjlib/include/pj/rbtree.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/pjproject-device/pjlib/include/pj/sock_select.h \
   /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/SupportedFiles/pjproject-device/pjlib/include/pj/unicode.h \
-  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/NSNotificationAdditions.h
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/NSNotificationAdditions.h \
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeVoiceCall.h \
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeJSON.h \
+  /Users/vikashsamota/Desktop/RalleeSDK_iPhone/RalleeSDK/RalleeRequest.h
