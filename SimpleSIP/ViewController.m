@@ -19,8 +19,6 @@
 
 //#define thirdParty
 
-//#import "RalleeMiddlewareConnectionController.h"
-
 NSString* kAppId = @"141462222695498";
 NSString* fbID;
 
@@ -35,16 +33,22 @@ NSString* fbID;
 @implementation ViewController
 @synthesize shared;
 @synthesize requestConnection;
-@synthesize testLabel;
 
 
 - (IBAction)dialNumber:(id)sender {
     RalleeAccounts* r = [RalleeAccounts sharedController];
     
+<<<<<<< HEAD
     NSLog(@"%@", [numberField text]);
     
     if ([[numberField text] length] == 0)
         [r callUsingNumber:@"190"];
+=======
+    if ([[numberField text] length] == 0) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No number to dial" message:@"Please enter a number and dial" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     else
         [r callUsingNumber:[numberField text]];
     
@@ -82,6 +86,7 @@ NSString* fbID;
     
     RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
 
+<<<<<<< HEAD
   
     //BOOL abc = [voice callUserWithUserID:@"" andSNName:@"fb"];
     
@@ -103,8 +108,12 @@ NSString* fbID;
     
     
 
+=======
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     callUserData cud;
+    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     
+<<<<<<< HEAD
 
     //cud.called_user = @"100004208564196";
     //cud.caller_user = @"816784662";
@@ -169,6 +178,33 @@ NSString* fbID;
 //        };
 
     
+=======
+    if ([[callUser text] length] == 0){
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No user to call" message:@"Please select a user and call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+    else {
+        NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+        if ([[callUser text] rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+        {
+            cud.called_user = [callUser text];
+            cud.sn_type_caller = @"fb";
+            cud.sn_type_called = @"fb";
+            
+            BOOL abc = [voice callUser:cud];
+            if (abc)
+                NSLog(@"calling is succesful");
+            else
+                NSLog(@"call is unsuccesful");
+        }
+        else {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No proper id to call" message:@"Please select a user or enter proper facebook id of the user to call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+       
+    }
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -207,10 +243,8 @@ NSString* fbID;
     ud.device_token = @"device_iPhone";
     
 #endif
-    [statusLabel setText:@"Requesting Middleware for authentication"];
-    [table setHidden:NO];
-    [callButton setHidden:NO];
-    [callUser setHidden:NO];
+    [statusLabel setText:@"Connecting..."];
+   
     BOOL str = [ralleeReg registerToRallee:ud];
     
     //    id str = [middleware registerToRallee:[[NSDictionary alloc] initWithObjectsAndKeys:[[NSDictionary alloc] initWithObjectsAndKeys: [[NSDictionary alloc] initWithObjectsAndKeys:appDelegate.session.accessToken, @"fb", nil], @"access_tokens", [[NSDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%@:%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"],[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]], @"fb",     nil], @"account_info", nil],@"credentials",     [[NSDictionary alloc] initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"], @"first_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], @"last_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"], @"email",     @"Rallee_2.0", @"rallee_ver",     nil], @"data", nil]];
@@ -352,9 +386,7 @@ NSString* fbID;
     
 
     [statusLabel setText:@"Requesting Middleware for authentication"];
-    [table setHidden:NO];
-    [callButton setHidden:NO];
-    [callUser setHidden:NO];
+
     BOOL str = [ralleeReg registerToRallee:ud];
 
     if (str)
@@ -386,12 +418,6 @@ NSString* fbID;
     // users will simply close the app or switch away, without logging out; this will
     // cause the implicit cached-token login to occur on next launch of the application
     //    [appDelegate.session closeAndClearTokenInformation];
-    
-    
-    
-    
-    
-    
     //   }
     // if (appDelegate.session.state != FBSessionStateCreated) {
     // Create a new, logged out session.
@@ -406,6 +432,7 @@ NSString* fbID;
         [self updateView];
     }];
     
+<<<<<<< HEAD
     
 //    accs2 = [RalleeAccounts sharedController];
 //    
@@ -421,6 +448,8 @@ NSString* fbID;
 //       
 //    };
     
+=======
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
 }
 
 #endif
@@ -436,22 +465,47 @@ NSString* fbID;
     NSLog(@"i");
 }
 
+-(void)cancelNumberPad{
+    [numberField resignFirstResponder];
+    numberField.text = @"";
+}
+
+-(void)doneWithNumberPad{
+   // NSString *numberFromTheKeyboard = numberField.text;
+    [numberField resignFirstResponder];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    [self.testLabel setText:@"Hello"];
     
    // NSLog(@"%@ %@", self, testLabel);
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Apply" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           nil];
+    [numberToolbar sizeToFit];
+    numberField.inputAccessoryView = numberToolbar;
     
     
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
+<<<<<<< HEAD
     
     
     [rejectButton setHidden:YES];
     [answerButton setHidden:YES];
+=======
+    [dialNum setHidden:YES];
+    [numberField setHidden:YES];
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     
     [statusLabel setText:@""];
     
@@ -461,7 +515,11 @@ NSString* fbID;
     
     called_user= [[NSString alloc] init];
 
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:
+                                                                // @"bg2"
+                                                                //  @"bg.jpg"
+                                                                  @"bg3.jpg"
+                                                                  ]]];
     
     RalleeReg* middle = [RalleeReg sharedController];
     
@@ -475,6 +533,7 @@ NSString* fbID;
    // [callButton setHidden:YES];
     
     accs2 = [RalleeAccounts sharedController];
+<<<<<<< HEAD
     
     accs2.delegate=self;
     
@@ -497,21 +556,44 @@ NSString* fbID;
                // [self.testLabel setText:@"NEW"];
                 
                  //[callButton setHidden:YES];
+=======
+    //NSLog(@"before handler");
+    
+    accs2.handler = ^(NSDictionary* dict) {
+        int status = [[NSString stringWithFormat:@"%@",[dict objectForKey:@"Status"]] intValue];
+        
+        
+        NSLog(@"handler : %@ status %@",dict, [dict objectForKey:@"StatusText"]);
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            double delayInSeconds = 3.0;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                if (status == 200) {
+                    [statusLabel setText:[NSString stringWithFormat:@"You are logged in as %@ %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"]]];
+                    [table setHidden:NO];
+                    [callButton setHidden:NO];
+                    [callUser setHidden:NO];
+                    [dialNum setHidden:NO];
+                    [numberField setHidden:NO];
+                }
+                else
+                    [loginButton setHidden:NO];
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
                 
                 
             });
             
             
         });
+<<<<<<< HEAD
         
     
         //dispatch_queue_t main_queue = dispatch_get_main_queue();
 
+=======
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
     };
-
-    
-    
-    
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -584,26 +666,7 @@ NSString* fbID;
 
 -(void)changeStatus
 {
-    
-    //[self.testLabel setText:@"Method"];
-    
-//    accs2.handler = ^(NSDictionary* dict) {
-//        NSLog(@"handler : %@",dict);
-//        
-//        //NSLog(@"%@ status ", [dict objectForKey:@"StatusText"]);
-//        
-//        [self.testLabel setText:@"TEST METHOD"];
-//        
-//        //[self changeStatus];
-//        
-//       
-//        
-//    };
-    
-    
-    
-    [self.testLabel setText:@"TEST METHOD"];
-
+    [statusLabel setText:@"TEST METHOD"];
 }
 
 - (void)didReceiveMemoryWarning

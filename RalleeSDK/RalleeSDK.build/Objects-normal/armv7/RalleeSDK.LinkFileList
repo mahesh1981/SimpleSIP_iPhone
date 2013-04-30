@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeError.o
 /Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeLogger.o
 /Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeNativeDialogs.o
@@ -17,3 +18,24 @@
 /Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeReg.o
 /Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeVoiceCall.o
 /Users/vikashsamota/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeURLConnection.o
+=======
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeError.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeLogger.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeNativeDialogs.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeRequest.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeNetworkCheck.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeJSON.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeSDK.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeAccounts.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/Rallee.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/NSString+SBJSON.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/SBJSON.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/SBJsonBase.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/SBJsonParser.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/SBJsonWriter.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/Reachability.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/NSNotificationAdditions.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeReg.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeVoiceCall.o
+/Users/techlites/Desktop/SimpleSIP_iPhone/RalleeSDK/RalleeSDK.build/Objects-normal/armv7/RalleeURLConnection.o
+>>>>>>> b5ab5498f3b424f44188044e91aab2ff65bfdc5a
