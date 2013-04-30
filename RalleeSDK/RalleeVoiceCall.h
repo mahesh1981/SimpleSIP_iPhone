@@ -10,6 +10,7 @@
 #import "Rallee.h"
 #import "RalleeJSON.h"
 #import "RalleeRequest.h"
+#include "RalleeAccounts.h"
 
 @interface RalleeVoiceCall : NSObject {
     
@@ -19,6 +20,8 @@
                   andSNName:(NSString *)SNName;
 
 - (BOOL) callUser:(callUserData )callData;
+
+- (BOOL) answerCall;
 
 
 @end

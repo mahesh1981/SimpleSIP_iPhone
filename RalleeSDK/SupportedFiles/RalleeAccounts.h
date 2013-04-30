@@ -18,6 +18,8 @@ typedef struct accountDetails {
 
 typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 
+typedef void(^RalleeCallHandler)(NSInteger state);
+
 @interface RalleeAccounts : NSObject {
     accountDetails acct;
 }
@@ -29,9 +31,15 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 //- (void)processRegState:(NSNotification *)notification;
 
 - (BOOL) callUsingNumber:(NSString *)number;
+- (void)processCallState:(NSNotification *)notification;
+
+
+- (void)openWithCompletionHandler:(RalleeCallHandler)handler1;
 
 
 
 @property (nonatomic, copy) RalleeAccountsHandler handler;
+@property (nonatomic, copy) RalleeCallHandler callHandler;
+
 
 @end

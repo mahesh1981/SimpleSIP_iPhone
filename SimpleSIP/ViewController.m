@@ -19,8 +19,6 @@
 
 //#define thirdParty
 
-//#import "RalleeMiddlewareConnectionController.h"
-
 NSString* kAppId = @"141462222695498";
 NSString* fbID;
 
@@ -89,15 +87,25 @@ NSString* fbID;
         [alert show];
     }
     else {
-        cud.called_user = [callUser text];
-        cud.sn_type_caller = @"fb";
-        cud.sn_type_called = @"fb";
-    
-        BOOL abc = [voice callUser:cud];
-        if (abc)
-            NSLog(@"calling is succesful");
-        else
-            NSLog(@"call is unsuccesful");
+        NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+        if ([[callUser text] rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+        {
+            cud.called_user = [callUser text];
+            cud.sn_type_caller = @"fb";
+            cud.sn_type_called = @"fb";
+            
+            BOOL abc = [voice callUser:cud];
+            if (abc)
+                NSLog(@"calling is succesful");
+            else
+                NSLog(@"call is unsuccesful");
+        }
+        else {
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No proper id to call" message:@"Please select a user or enter proper facebook id of the user to call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+       
     }
 }
 
@@ -312,12 +320,6 @@ NSString* fbID;
     // users will simply close the app or switch away, without logging out; this will
     // cause the implicit cached-token login to occur on next launch of the application
     //    [appDelegate.session closeAndClearTokenInformation];
-    
-    
-    
-    
-    
-    
     //   }
     // if (appDelegate.session.state != FBSessionStateCreated) {
     // Create a new, logged out session.
@@ -350,12 +352,33 @@ NSString* fbID;
     NSLog(@"i");
 }
 
+-(void)cancelNumberPad{
+    [numberField resignFirstResponder];
+    numberField.text = @"";
+}
+
+-(void)doneWithNumberPad{
+   // NSString *numberFromTheKeyboard = numberField.text;
+    [numberField resignFirstResponder];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     
    // NSLog(@"%@ %@", self, testLabel);
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Apply" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           nil];
+    [numberToolbar sizeToFit];
+    numberField.inputAccessoryView = numberToolbar;
     
     
     [table setHidden:YES];
@@ -372,7 +395,11 @@ NSString* fbID;
     
     called_user= [[NSString alloc] init];
 
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:
+                                                                // @"bg2"
+                                                                //  @"bg.jpg"
+                                                                  @"bg3.jpg"
+                                                                  ]]];
     
     RalleeReg* middle = [RalleeReg sharedController];
     
