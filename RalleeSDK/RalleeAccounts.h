@@ -22,6 +22,8 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 
 @protocol CallHandlerDelegate;
 
+typedef void(^RalleeCallHandler)(NSInteger state);
+
 @interface RalleeAccounts : NSObject {
     accountDetails acct;
 }
@@ -35,13 +37,17 @@ typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 - (BOOL) callUsingNumber:(NSString *)number;
 - (void)processCallState:(NSNotification *)notification;
 
-//- (void)openWithCompletionHandler:(NSInteger)states;
+
+
+- (void)openWithCompletionHandler:(RalleeCallHandler)handler1;
+
 
 
 @property (nonatomic, strong) id<CallHandlerDelegate> delegate;
 
 @property (nonatomic, copy) RalleeAccountsHandler handler;
-//@property (nonatomic, copy) RalleeCallHandler callHandler;
+
+@property (nonatomic, copy) RalleeCallHandler callHandler;
 
 
 @end
