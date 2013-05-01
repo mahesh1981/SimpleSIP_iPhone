@@ -39,19 +39,15 @@ NSString* fbID;
     RalleeAccounts* r = [RalleeAccounts sharedController];
     [numberField resignFirstResponder];
     
-<<<<<<< HEAD
+
     outgoingCall = YES;
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
+
     if ([[numberField text] length] == 0) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No number to dial" message:@"Please enter a number and dial" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
     else
         [r callUsingNumber:[numberField text]];
     
@@ -92,10 +88,7 @@ NSString* fbID;
     callUserData cud;
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
     if ([[callUser text] length] == 0){
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No user to call" message:@"Please select a user and call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
@@ -129,10 +122,7 @@ NSString* fbID;
             [alert show];
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -359,10 +349,7 @@ NSString* fbID;
         [statusLabel setText:@"Facebook Login is complete"];
         [self updateView];
     }];
-<<<<<<< HEAD
-    
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
+
 
 //    accs2 = [RalleeAccounts sharedController];
 //    
@@ -425,21 +412,17 @@ NSString* fbID;
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
     [rejectButton setHidden:YES];
     [answerButton setHidden:YES];
     [cancelCallButton setHidden:YES];
     [dialNumberButton setHidden:YES];
     [numberField setHidden:YES];
-<<<<<<< HEAD
+
     isAnswering= NO;
     
     
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
+
     [statusLabel setText:@""];
     
     outgoingCall = NO;
@@ -468,10 +451,7 @@ NSString* fbID;
    // [callButton setHidden:YES];
     
     accs2 = [RalleeAccounts sharedController];
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
 
     
     accs2.delegate=self;
@@ -479,11 +459,7 @@ NSString* fbID;
     //NSLog(@"before handler");
     
     
-<<<<<<< HEAD
 
-    
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
     accs2.handler = ^(NSDictionary* dict) {
         int status = [[NSString stringWithFormat:@"%@",[dict objectForKey:@"Status"]] intValue];
         
@@ -501,33 +477,21 @@ NSString* fbID;
                     [callUser setHidden:NO];
 
                     [dialNumberButton setHidden:NO];
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
                     [numberField setHidden:NO];
                 }
                 else
                     [loginButton setHidden:NO];
-<<<<<<< HEAD
 
-=======
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
                 
             });
             
             
         });
-<<<<<<< HEAD
 
-        
-    
-        //dispatch_queue_t main_queue = dispatch_get_main_queue();
-
-=======
         //dispatch_queue_t main_queue = dispatch_get_main_queue();
         
->>>>>>> 6d112b771dbfeaea9cac8a5e6b1c45bbae27b95a
+
     };
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
