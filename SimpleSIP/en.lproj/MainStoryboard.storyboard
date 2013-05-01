@@ -110,6 +110,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-ix-6BF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="Rde-YN-c73"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.64514690900000005" green="0.088588741299999996" blue="0.068143458539999993" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelOngoingCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="A6A-VV-di6"/>
+                                    <action selector="rejectCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="ht1-Lw-Tty"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-cb-8pP">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="i3d-9f-PeM"/>
@@ -131,6 +149,7 @@
                                     <constraint firstAttribute="width" constant="142" id="Hcq-1c-npJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.64514690896739135" green="0.088588741300463" blue="0.068143458543473825" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Reject">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,6 +166,7 @@
                                     <constraint firstAttribute="width" constant="137" id="AWF-6h-aT1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.32279347491907995" green="1" blue="0.32437513041690436" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,28 +197,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fNM-v7-h58" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="80" id="2Xw-T7-GrY"/>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="bottom" secondItem="Bdd-Lh-YIK" secondAttribute="bottom" type="default" id="2gp-Tw-UaV"/>
-                            <constraint firstItem="4zr-MA-Kp6" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="45" id="3jO-Q0-MBu"/>
-                            <constraint firstItem="nM1-p7-XR4" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="27" id="6bl-UX-MxQ"/>
-                            <constraint firstItem="fNM-v7-h58" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="17" id="Dbw-8j-5N3"/>
+                            <constraint firstItem="fNM-v7-h58" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="80" id="8o1-7h-odF"/>
                             <constraint firstItem="Jed-ry-hNe" firstAttribute="trailing" secondItem="p41-2P-Fa7" secondAttribute="trailing" type="default" id="GIW-g1-6h1"/>
-                            <constraint firstItem="aNP-cb-8pP" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="139" id="Ka5-Lu-v74"/>
+                            <constraint firstAttribute="trailing" secondItem="4zr-MA-Kp6" secondAttribute="trailing" constant="82" id="Gvc-Gj-DyB"/>
+                            <constraint firstItem="QWN-EV-n1R" firstAttribute="trailing" secondItem="nM1-p7-XR4" secondAttribute="trailing" type="default" id="LCx-es-MpP"/>
+                            <constraint firstItem="bn5-ix-6BF" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="180" id="Pgz-oR-GWd"/>
+                            <constraint firstItem="QWN-EV-n1R" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="45" id="Svi-TD-fXL"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="TVy-Sw-jOf"/>
                             <constraint firstItem="aNP-cb-8pP" firstAttribute="baseline" secondItem="fNM-v7-h58" secondAttribute="baseline" type="default" id="Vax-xc-Va7"/>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="dFn-zq-JWe"/>
+                            <constraint firstItem="Jed-ry-hNe" firstAttribute="top" secondItem="aNP-cb-8pP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="esL-kq-Y47"/>
+                            <constraint firstItem="aNP-cb-8pP" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="142" id="fMf-tL-hAf"/>
                             <constraint firstItem="fNM-v7-h58" firstAttribute="top" secondItem="aNP-cb-8pP" secondAttribute="top" type="default" id="gOE-pz-Orc"/>
                             <constraint firstItem="QWN-EV-n1R" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="3" id="hju-QP-IoP"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" type="default" id="jHQ-lt-C2e"/>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="jj9-kM-58y"/>
                             <constraint firstItem="p41-2P-Fa7" firstAttribute="centerX" secondItem="Y96-vu-leA" secondAttribute="centerX" type="default" id="m0L-8M-c0o"/>
-                            <constraint firstItem="p41-2P-Fa7" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="31" id="mDx-pG-ST8"/>
-                            <constraint firstAttribute="trailing" secondItem="4zr-MA-Kp6" secondAttribute="trailing" constant="81" id="nYe-dK-10H"/>
                             <constraint firstItem="G2s-F9-cuT" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="oRg-Cq-a9B"/>
                             <constraint firstItem="4zr-MA-Kp6" firstAttribute="baseline" secondItem="QWN-EV-n1R" secondAttribute="baseline" type="default" id="s5v-GA-T4D"/>
+                            <constraint firstItem="p41-2P-Fa7" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="31" id="t4J-ee-LzS"/>
                             <constraint firstItem="Jed-ry-hNe" firstAttribute="baseline" secondItem="nM1-p7-XR4" secondAttribute="baseline" type="default" id="vZe-BV-Ct1"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="veP-FH-kdZ"/>
-                            <constraint firstItem="nM1-p7-XR4" firstAttribute="top" secondItem="aNP-cb-8pP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x8q-5i-cZ3"/>
+                            <constraint firstItem="bn5-ix-6BF" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="94" id="xBQ-hJ-Y7x"/>
+                            <constraint firstItem="fNM-v7-h58" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="12" id="xh9-ra-umU"/>
                             <constraint firstItem="G2s-F9-cuT" firstAttribute="centerY" secondItem="4zr-MA-Kp6" secondAttribute="centerY" type="default" id="zkD-dX-4cI"/>
                         </constraints>
                     </view>
@@ -207,6 +229,7 @@
                         <outlet property="answerButton" destination="Jed-ry-hNe" id="ypg-WP-Mi4"/>
                         <outlet property="callButton" destination="fNM-v7-h58" id="f2V-Gr-tun"/>
                         <outlet property="callUser" destination="QWN-EV-n1R" id="dhH-zQ-zCN"/>
+                        <outlet property="cancelCallButton" destination="bn5-ix-6BF" id="Iju-AO-2H6"/>
                         <outlet property="dialNumberButton" destination="aNP-cb-8pP" id="PUT-R5-HcH"/>
                         <outlet property="loginButton" destination="p41-2P-Fa7" id="Uvr-5T-dhG"/>
                         <outlet property="logoutButton" destination="G2s-F9-cuT" id="uw8-k4-CX0"/>
@@ -441,6 +464,52 @@
     <resources>
         <image name="fb.png" width="300" height="65"/>
     </resources>
+    <classes>
+        <class className="MainPage" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainPage.h"/>
+            <relationships>
+                <relationship kind="action" name="addBuddy:"/>
+                <relationship kind="action" name="answerPressed:"/>
+                <relationship kind="action" name="call:"/>
+                <relationship kind="action" name="callNumber:"/>
+                <relationship kind="action" name="refreshBuddies:"/>
+                <relationship kind="action" name="sendMessage:"/>
+                <relationship kind="outlet" name="answerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="buddyID" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="call" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="message" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberL" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="answerCall:"/>
+                <relationship kind="action" name="callUser:"/>
+                <relationship kind="action" name="cancelOngoingCall:"/>
+                <relationship kind="action" name="dialNumber:"/>
+                <relationship kind="action" name="fbLogin:"/>
+                <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="rejectCall:"/>
+                <relationship kind="outlet" name="answerButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="callUser" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cancelCallButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dialNumberButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logoutButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="numberField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="rejectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

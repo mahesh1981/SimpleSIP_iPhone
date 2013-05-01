@@ -279,7 +279,7 @@ typedef void (^FBSessionReauthorizeResultHandler)(FBSession *session,
         permissions:(NSArray*)permissions
     defaultAudience:(FBSessionDefaultAudience)defaultAudience
     urlSchemeSuffix:(NSString*)urlSchemeSuffix
- tokenCacheStrategy:(FacebookSDK*)tokenCachingStrategy;
+ tokenCacheStrategy:(FBSessionTokenCachingStrategy*)tokenCachingStrategy;
 
 // instance readonly properties         
 

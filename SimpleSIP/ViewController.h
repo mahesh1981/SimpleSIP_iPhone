@@ -33,6 +33,10 @@
     IBOutlet UITextField* numberField;
     IBOutlet UIButton* dialNumberButton;
     IBOutlet UIButton* logoutButton;
+    IBOutlet UIButton* cancelCallButton;
+    
+    BOOL outgoingCall;
+    BOOL isAnswering;
     
    // IBOutlet UILabel *testLabel;
 }
