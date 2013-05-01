@@ -34,8 +34,20 @@ NSString* fbID;
 @synthesize requestConnection;
 
 - (IBAction)logout:(id)sender {
+    [table setHidden:YES];
+    [callButton setHidden:YES];
+    [callUser setHidden:YES];
+    
+    [rejectButton setHidden:YES];
+    [answerButton setHidden:YES];
+    [cancelCallButton setHidden:YES];
+    [dialNumberButton setHidden:YES];
+    [numberField setHidden:YES];
+    
     [loginButton setHidden:NO];
     [logoutButton setHidden:YES];
+    
+    [statusLabel setText:@"Disconnected"];
     
     FBSession* session = [FBSession activeSession];
     [session closeAndClearTokenInformation];
