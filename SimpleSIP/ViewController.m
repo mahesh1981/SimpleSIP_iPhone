@@ -59,11 +59,17 @@ NSString* fbID;
 
 - (IBAction)dialNumber:(id)sender {
     RalleeAccounts* r = [RalleeAccounts sharedController];
+    [numberField resignFirstResponder];
     
+
+    outgoingCall = YES;
+
+
     if ([[numberField text] length] == 0) {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No number to dial" message:@"Please enter a number and dial" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
+
     else
         [r callUsingNumber:[numberField text]];
     
@@ -104,6 +110,7 @@ NSString* fbID;
     callUserData cud;
     cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
     
+
     if ([[callUser text] length] == 0){
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No user to call" message:@"Please select a user and call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
@@ -118,7 +125,30 @@ NSString* fbID;
             
             BOOL abc = [voice callUser:cud];
             if (abc)
+            {
                 NSLog(@"calling is succesful");
+                outgoingCall = YES;
+                
+                [statusLabel setText:[NSString stringWithFormat:@"Calling %@", [callUser text]]];
+                
+                
+                [table setHidden:YES];
+                [callButton setHidden:YES];
+                [callUser setHidden:YES];
+                [numberField setHidden:YES];
+                [dialNumberButton setHidden:YES];
+                
+                //[callButton performSelector:@selector() withObject:nil];
+                
+                
+                [rejectButton setHidden:YES];
+                [answerButton setHidden:YES];
+                
+                [cancelCallButton setHidden:NO];
+                
+                
+                
+            }
             else
                 NSLog(@"call is unsuccesful");
         }
@@ -127,6 +157,7 @@ NSString* fbID;
             [alert show];
         }
     }
+
 }
 
 + (void) accountStatus:(NSNotification *)notification {
@@ -356,6 +387,7 @@ NSString* fbID;
         [self updateView];
     }];
 
+
 //    accs2 = [RalleeAccounts sharedController];
 //    
 //    //NSLog(@"before handler");
@@ -417,16 +449,25 @@ NSString* fbID;
     [table setHidden:YES];
     [callButton setHidden:YES];
     [callUser setHidden:YES];
+
     [rejectButton setHidden:YES];
     [answerButton setHidden:YES];
+    [cancelCallButton setHidden:YES];
     [dialNumberButton setHidden:YES];
     [numberField setHidden:YES];
+
+    isAnswering= NO;
+    
+    
+
     [statusLabel setText:@""];
     [logoutButton setHidden:YES];
     
+    outgoingCall = NO;
+    
     friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", @"100005551420166",nil];
     
-    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"Manik's RalleeSIP", @"Manik's_New RalleeSIP",nil];
+    friendsNames = [[NSMutableArray alloc] initWithObjects:@"Bhartesh",@"Chandra's Siphon", @"Chandra's RalleeSIP", @"Joy's RalleeSIP", @"Arun's RalleeSIP", @"NancyPaul's RalleeSIP", @"Manik's_New RalleeSIP",nil];
     
     called_user= [[NSString alloc] init];
 
@@ -449,12 +490,14 @@ NSString* fbID;
     
     accs2 = [RalleeAccounts sharedController];
 
+
     
     accs2.delegate=self;
     
     //NSLog(@"before handler");
     
     
+
     accs2.handler = ^(NSDictionary* dict) {
         int status = [[NSString stringWithFormat:@"%@",[dict objectForKey:@"Status"]] intValue];
         
@@ -472,17 +515,21 @@ NSString* fbID;
                     [callUser setHidden:NO];
 
                     [dialNumberButton setHidden:NO];
+
                     [numberField setHidden:NO];
                 }
                 else
                     [loginButton setHidden:NO];
+
                 
             });
             
             
         });
+
         //dispatch_queue_t main_queue = dispatch_get_main_queue();
         
+
     };
     
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -512,18 +559,114 @@ NSString* fbID;
 {
     NSLog(@"Completion Handler Called");
     
+    
+    NSLog(@"%@", notificationDict);
+    
     NSLog(@"%d",  [[notificationDict objectForKey: @"State"] intValue]);
     
     
+     //BOOL outgoingCall = [[NSUserDefaults standardUserDefaults] boolForKey:@"myCallAccept"];
+    
+    
+    NSLog(@"%d", outgoingCall);
+    
     //int state = [[notificationDict objectForKey: @"State"] intValue];
     
+    NSString *stateStr = [notificationDict objectForKey:@"StateText"];
     
+    
+    NSLog(@"Before GCD");
     
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         double delayInSeconds = 0.3;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             
+            
+            NSLog(@"inside GCD %@", stateStr);
+            NSLog(@"remote contact %@", [notificationDict objectForKey:@"RemoteContact"]);
+            NSLog(@"remote callID %@", [notificationDict objectForKey:@"CallID"]);
+            NSLog(@"remote info %@", [notificationDict objectForKey:@"RemoteInfo"]);
+            
+            /*if the call is an incoming call*/
+           // if (!outgoingCall && !isAnswering)
+                
+            if ([stateStr isEqualToString:@"EARLY"])
+            {
+                
+                
+                [table setHidden:YES];
+                [callButton setHidden:YES];
+                [callUser setHidden:YES];
+                [numberField setHidden:YES];
+                [dialNumberButton setHidden:YES];
+                
+                //[callButton performSelector:@selector() withObject:nil];
+                
+                
+                [rejectButton setHidden:NO];
+                [answerButton setHidden:NO];
+                
+                NSLog(@"Incoming Call : %@", stateStr);
+                
+                [statusLabel setText:[NSString stringWithFormat:@"Incoming Call: %@", [notificationDict objectForKey:@"RemoteInfo"]]];
+                
+
+                if(outgoingCall)
+                    [statusLabel setText:@"Ringing"];
+                
+            }
+            else if ([stateStr isEqualToString:@"DISCONNCTD"])
+            {
+            
+                [table setHidden:NO];
+                [callButton setHidden:NO];
+                [callUser setHidden:NO];
+                [numberField setHidden:NO];
+                [dialNumberButton setHidden:NO];
+                
+                [answerButton setHidden:YES];
+                [rejectButton setHidden:YES];
+                [cancelCallButton setHidden:YES];
+                
+                
+                [statusLabel setText:@"Call Disconnected"];
+            
+            }
+            if(outgoingCall)
+            {
+                [table setHidden:YES];
+                [callButton setHidden:YES];
+                [callUser setHidden:YES];
+                [numberField setHidden:YES];
+                [dialNumberButton setHidden:YES];
+                
+                //[callButton performSelector:@selector() withObject:nil];
+                
+                
+                [rejectButton setHidden:YES];
+                [answerButton setHidden:YES];
+                
+                [cancelCallButton setHidden:NO];
+            
+            
+            }
+            
+//            else if(outgoingCall)
+//            {
+//                [cancelCallButton setHidden:NO];
+//                
+//                [table setHidden:YES];
+//                [callButton setHidden:YES];
+//                [callUser setHidden:YES];
+//                [numberField setHidden:YES];
+//                [dialNumberButton setHidden:YES];
+//                [rejectButton setHidden:YES];
+//                [answerButton setHidden:YES];
+//            }
+            
+            
+                        
             // [self.testLabel setText:@"NEW"];
             
             //[callButton setHidden:YES];
@@ -548,17 +691,7 @@ NSString* fbID;
             
 
             
-            [table setHidden:YES];
-            [callButton setHidden:YES];
-            [callUser setHidden:YES];
-            [numberField setHidden:YES];
-            [dialNumberButton setHidden:YES];
-            
-            //[callButton performSelector:@selector() withObject:nil];
-            
-            
-            [rejectButton setHidden:NO];
-            [answerButton setHidden:NO];
+           
             
             
         });
@@ -572,7 +705,19 @@ NSString* fbID;
 
 -(IBAction)answerCall:(id)sender
 {
-
+    [answerButton setHidden:YES];
+    [rejectButton setHidden:YES];
+    
+    [statusLabel setText:@"Connected"];
+    
+    [accs2 answerCall];
+    
+    [cancelCallButton setHidden:NO];
+    
+    
+    outgoingCall = NO;
+    
+    isAnswering= YES;
     
     
 
@@ -581,8 +726,50 @@ NSString* fbID;
 -(IBAction)rejectCall:(id)sender
 
 {
+    [accs2 cancelCall];
+    
+    [table setHidden:NO];
+    [callButton setHidden:NO];
+    [callUser setHidden:NO];
+    [numberField setHidden:NO];
+    [dialNumberButton setHidden:NO];
+    
+    [answerButton setHidden:YES];
+    [rejectButton setHidden:YES];
+    
+    outgoingCall = NO;
+    
+    isAnswering = NO;
+    
+    
+}
+
+-(IBAction)cancelOngoingCall:(id)sender
+{
 
     
+    [accs2 endCall];
+    
+    
+    
+    [cancelCallButton setHidden:YES];
+    
+    
+    [table setHidden:NO];
+    [callButton setHidden:NO];
+    [callUser setHidden:NO];
+    [numberField setHidden:NO];
+    [dialNumberButton setHidden:NO];
+    
+    [answerButton setHidden:YES];
+    [rejectButton setHidden:YES];
+    
+    
+    outgoingCall = NO;
+    isAnswering = NO;
+    [statusLabel setText:@"Last Call Cancelled"];
+    
+
 }
 
 //-(void)changeStatus
