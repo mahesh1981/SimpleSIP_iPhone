@@ -107,7 +107,20 @@ NSString* fbID;
                 NSLog(@"calling is succesful");
                 outgoingCall = YES;
                 
-                [statusLabel setText:[NSString stringWithFormat:@"%@", [callUser text]]];
+                [statusLabel setText:[NSString stringWithFormat:@"Calling %@", [callUser text]]];
+                
+                
+                [table setHidden:YES];
+                [callButton setHidden:YES];
+                [callUser setHidden:YES];
+                [numberField setHidden:YES];
+                [dialNumberButton setHidden:YES];
+                
+                //[callButton performSelector:@selector() withObject:nil];
+                
+                
+                [rejectButton setHidden:YES];
+                [answerButton setHidden:YES];
                 
                 [cancelCallButton setHidden:NO];
                 
@@ -521,6 +534,9 @@ NSString* fbID;
 {
     NSLog(@"Completion Handler Called");
     
+    
+    NSLog(@"%@", notificationDict);
+    
     NSLog(@"%d",  [[notificationDict objectForKey: @"State"] intValue]);
     
     
@@ -533,13 +549,24 @@ NSString* fbID;
     
     NSString *stateStr = [notificationDict objectForKey:@"StateText"];
     
+    
+    NSLog(@"Before GCD");
+    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         double delayInSeconds = 0.3;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             
+            
+            NSLog(@"inside GCD %@", stateStr);
+            NSLog(@"remote contact %@", [notificationDict objectForKey:@"RemoteContact"]);
+            NSLog(@"remote callID %@", [notificationDict objectForKey:@"CallID"]);
+            NSLog(@"remote info %@", [notificationDict objectForKey:@"RemoteInfo"]);
+            
             /*if the call is an incoming call*/
-            if (!outgoingCall && !isAnswering)
+           // if (!outgoingCall && !isAnswering)
+                
+            if ([stateStr isEqualToString:@"EARLY"])
             {
                 
                 
@@ -555,25 +582,63 @@ NSString* fbID;
                 [rejectButton setHidden:NO];
                 [answerButton setHidden:NO];
                 
-                NSLog(@"%@", stateStr);
+                NSLog(@"Incoming Call : %@", stateStr);
                 
-                [statusLabel setText:stateStr];
+                [statusLabel setText:[NSString stringWithFormat:@"Incoming Call: %@", [notificationDict objectForKey:@"RemoteInfo"]]];
                 
 
+                if(outgoingCall)
+                    [statusLabel setText:@"Ringing"];
                 
             }
-            else if(outgoingCall)
+            else if ([stateStr isEqualToString:@"DISCONNCTD"])
             {
-                [cancelCallButton setHidden:NO];
+            
+                [table setHidden:NO];
+                [callButton setHidden:NO];
+                [callUser setHidden:NO];
+                [numberField setHidden:NO];
+                [dialNumberButton setHidden:NO];
                 
+                [answerButton setHidden:YES];
+                [rejectButton setHidden:YES];
+                [cancelCallButton setHidden:YES];
+                
+                
+                [statusLabel setText:@"Call Disconnected"];
+            
+            }
+            if(outgoingCall)
+            {
                 [table setHidden:YES];
                 [callButton setHidden:YES];
                 [callUser setHidden:YES];
                 [numberField setHidden:YES];
                 [dialNumberButton setHidden:YES];
+                
+                //[callButton performSelector:@selector() withObject:nil];
+                
+                
                 [rejectButton setHidden:YES];
                 [answerButton setHidden:YES];
+                
+                [cancelCallButton setHidden:NO];
+            
+            
             }
+            
+//            else if(outgoingCall)
+//            {
+//                [cancelCallButton setHidden:NO];
+//                
+//                [table setHidden:YES];
+//                [callButton setHidden:YES];
+//                [callUser setHidden:YES];
+//                [numberField setHidden:YES];
+//                [dialNumberButton setHidden:YES];
+//                [rejectButton setHidden:YES];
+//                [answerButton setHidden:YES];
+//            }
             
             
                         
@@ -659,6 +724,9 @@ NSString* fbID;
 
     
     [accs2 endCall];
+    
+    
+    
     [cancelCallButton setHidden:YES];
     
     
