@@ -8,12 +8,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "SimpleSIP/ViewController.m"
-         timestampString = "388915477.16003"
+         timestampString = "389027504.087768"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
-         landmarkName = "-dialNumber:"
+         startingLineNumber = "527"
+         endingLineNumber = "527"
+         landmarkName = "-openWithCallBackHandler:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "SimpleSIP/ViewController.m"
+         timestampString = "389082477.961239"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "540"
+         endingLineNumber = "540"
+         landmarkName = "-openWithCallBackHandler:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

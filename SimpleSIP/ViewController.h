@@ -32,6 +32,10 @@
     NSString* called_user;
     IBOutlet UITextField* numberField;
     IBOutlet UIButton* dialNumberButton;
+    IBOutlet UIButton* cancelCallButton;
+    
+    BOOL outgoingCall;
+    BOOL isAnswering;
     
    // IBOutlet UILabel *testLabel;
 }

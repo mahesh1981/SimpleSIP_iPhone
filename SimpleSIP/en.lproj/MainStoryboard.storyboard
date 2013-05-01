@@ -101,14 +101,32 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Connecting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y96-vu-leA">
-                                <color key="backgroundColor" red="1" green="0.81237462675016792" blue="0.26226345212954938" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="6Yt-Rk-tWR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.047896074970000001" green="0.61432465400000003" blue="0.64179262910000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-ix-6BF">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="Rde-YN-c73"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.64514690900000005" green="0.088588741299999996" blue="0.068143458539999993" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelOngoingCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="A6A-VV-di6"/>
+                                    <action selector="rejectCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="ht1-Lw-Tty"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-cb-8pP">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Dial Number">
@@ -122,12 +140,12 @@
                                     <action selector="dialNumber:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="6tI-Bp-uzI"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM1-p7-XR4">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="Hcq-1c-npJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.64514690896739135" green="0.088588741300463" blue="0.068143458543473825" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Reject">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,6 +162,7 @@
                                     <constraint firstAttribute="width" constant="137" id="AWF-6h-aT1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="0.32279347491907995" green="1" blue="0.32437513041690436" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Answer">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,21 +174,20 @@
                                     <action selector="answerCall:" destination="Xd9-yV-o8P" eventType="touchUpInside" id="m4J-0Y-4Ir"/>
                                 </connections>
                             </button>
-=======
->>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wbO-wY-si5" firstAttribute="bottom" secondItem="Bdd-Lh-YIK" secondAttribute="bottom" type="default" id="2gp-Tw-UaV"/>
                             <constraint firstItem="fNM-v7-h58" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="50" id="2zt-kQ-ji9"/>
-                            <constraint firstItem="Jed-ry-hNe" firstAttribute="centerX" secondItem="4zr-MA-Kp6" secondAttribute="centerX" type="default" id="5ej-pz-oKp"/>
                             <constraint firstItem="fNM-v7-h58" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="89" id="5i8-bx-bme"/>
                             <constraint firstItem="nM1-p7-XR4" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="123" id="BMC-kf-kdu"/>
                             <constraint firstItem="Jed-ry-hNe" firstAttribute="trailing" secondItem="p41-2P-Fa7" secondAttribute="trailing" type="default" id="GIW-g1-6h1"/>
                             <constraint firstItem="QWN-EV-n1R" firstAttribute="trailing" secondItem="nM1-p7-XR4" secondAttribute="trailing" type="default" id="LCx-es-MpP"/>
+                            <constraint firstItem="bn5-ix-6BF" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="180" id="Pgz-oR-GWd"/>
                             <constraint firstItem="Jed-ry-hNe" firstAttribute="leading" secondItem="aNP-cb-8pP" secondAttribute="leading" type="default" id="SiZ-ix-Ig1"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="trailing" secondItem="Bdd-Lh-YIK" secondAttribute="trailing" type="default" id="TVy-Sw-jOf"/>
                             <constraint firstItem="aNP-cb-8pP" firstAttribute="baseline" secondItem="fNM-v7-h58" secondAttribute="baseline" type="default" id="Vax-xc-Va7"/>
+                            <constraint firstAttribute="trailing" secondItem="4zr-MA-Kp6" secondAttribute="trailing" constant="46" id="Yrg-OB-4nU"/>
                             <constraint firstItem="QWN-EV-n1R" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="45" id="a79-6c-pk4"/>
                             <constraint firstItem="QWN-EV-n1R" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="14" id="avX-9A-da9"/>
                             <constraint firstItem="p41-2P-Fa7" firstAttribute="top" secondItem="Bdd-Lh-YIK" secondAttribute="top" constant="31" id="cnx-IP-9qz"/>
@@ -180,25 +198,19 @@
                             <constraint firstItem="4zr-MA-Kp6" firstAttribute="baseline" secondItem="QWN-EV-n1R" secondAttribute="baseline" type="default" id="s5v-GA-T4D"/>
                             <constraint firstItem="Jed-ry-hNe" firstAttribute="baseline" secondItem="nM1-p7-XR4" secondAttribute="baseline" type="default" id="vZe-BV-Ct1"/>
                             <constraint firstItem="Y96-vu-leA" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" type="default" id="veP-FH-kdZ"/>
+                            <constraint firstItem="bn5-ix-6BF" firstAttribute="leading" secondItem="Bdd-Lh-YIK" secondAttribute="leading" constant="94" id="xBQ-hJ-Y7x"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-<<<<<<< HEAD
                         <outlet property="answerButton" destination="Jed-ry-hNe" id="ypg-WP-Mi4"/>
                         <outlet property="callButton" destination="fNM-v7-h58" id="f2V-Gr-tun"/>
                         <outlet property="callUser" destination="QWN-EV-n1R" id="dhH-zQ-zCN"/>
+                        <outlet property="cancelCallButton" destination="bn5-ix-6BF" id="Iju-AO-2H6"/>
                         <outlet property="dialNumberButton" destination="aNP-cb-8pP" id="PUT-R5-HcH"/>
                         <outlet property="loginButton" destination="p41-2P-Fa7" id="Uvr-5T-dhG"/>
                         <outlet property="numberField" destination="4zr-MA-Kp6" id="Hcu-MB-myT"/>
                         <outlet property="rejectButton" destination="nM1-p7-XR4" id="XkX-tW-RMr"/>
-=======
-                        <outlet property="callButton" destination="fNM-v7-h58" id="f2V-Gr-tun"/>
-                        <outlet property="callUser" destination="QWN-EV-n1R" id="dhH-zQ-zCN"/>
-                        <outlet property="dialNumberButton" destination="aNP-cb-8pP" id="A6K-XU-Nyd"/>
-                        <outlet property="loginButton" destination="p41-2P-Fa7" id="Uvr-5T-dhG"/>
-                        <outlet property="numberField" destination="4zr-MA-Kp6" id="Hcu-MB-myT"/>
->>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
                         <outlet property="statusLabel" destination="Y96-vu-leA" id="6KV-d9-YLC"/>
                         <outlet property="table" destination="wbO-wY-si5" id="VRZ-ob-6Cx"/>
                         <segue destination="QNJ-yx-Fz7" kind="modal" identifier="Login" id="eKn-iR-5Wd"/>
@@ -428,51 +440,6 @@
     <resources>
         <image name="fb.png" width="300" height="65"/>
     </resources>
-<<<<<<< HEAD
-    <classes>
-        <class className="MainPage" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainPage.h"/>
-            <relationships>
-                <relationship kind="action" name="addBuddy:"/>
-                <relationship kind="action" name="answerPressed:"/>
-                <relationship kind="action" name="call:"/>
-                <relationship kind="action" name="callNumber:"/>
-                <relationship kind="action" name="refreshBuddies:"/>
-                <relationship kind="action" name="sendMessage:"/>
-                <relationship kind="outlet" name="answerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="buddyID" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="call" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="message" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="numberL" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="answerCall:"/>
-                <relationship kind="action" name="callUser:"/>
-                <relationship kind="action" name="dialNumber:"/>
-                <relationship kind="action" name="fbLogin:"/>
-                <relationship kind="action" name="rejectCall:"/>
-                <relationship kind="outlet" name="answerButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="callUser" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="dialNumberButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="numberField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="rejectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="table" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
-=======
->>>>>>> 7ee917ca9a9dd1cf73eaa574771f100ab6911db0
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
