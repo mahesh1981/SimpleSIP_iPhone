@@ -32,6 +32,7 @@
     NSString* called_user;
     IBOutlet UITextField* numberField;
     IBOutlet UIButton* dialNumberButton;
+    IBOutlet UIButton* logoutButton;
     
    // IBOutlet UILabel *testLabel;
 }
@@ -45,6 +46,7 @@
 
 -(IBAction)answerCall:(id)sender;
 -(IBAction)rejectCall:(id)sender;
+-(IBAction)logout:(id)sender;
 
 @property (strong, nonatomic) AppDelegate *shared;
 

@@ -11,7 +11,6 @@
 #import "AppDelegate.h"
 #import "MainPage.h"
 #import <FacebookSDK/FacebookSDK.h>
-
 #import "RalleeSDK.h"
 #import "MainPage.h"
 
@@ -33,6 +32,29 @@ NSString* fbID;
 @implementation ViewController
 @synthesize shared;
 @synthesize requestConnection;
+
+- (IBAction)logout:(id)sender {
+    [loginButton setHidden:NO];
+    [logoutButton setHidden:YES];
+    
+    FBSession* session = [FBSession activeSession];
+    [session closeAndClearTokenInformation];
+    [session close];
+    [FBSession setActiveSession:nil];
+    
+    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+    app.session = nil;
+    
+    NSHTTPCookieStorage* cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray* facebookCookies = [cookies cookiesForURL:[NSURL URLWithString:@"https://facebook.com/"]];
+    
+    for (NSHTTPCookie* cookie in facebookCookies) {
+        [cookies deleteCookie:cookie];
+    }
+    
+    [accs2 disconnect];
+    
+}
 
 
 - (IBAction)dialNumber:(id)sender {
@@ -257,10 +279,12 @@ NSString* fbID;
     if (NULL == appDelegate.session.accessToken) {
         NSLog(@"null token so no request");
         [loginButton setHidden:NO];
+        [logoutButton setHidden:YES];
     }
     else {
         [self sendRequest:@"me?fields=username,name,id,email"];
         [loginButton setHidden:YES];
+        [logoutButton setHidden:NO];
     }
 }
 
@@ -398,6 +422,7 @@ NSString* fbID;
     [dialNumberButton setHidden:YES];
     [numberField setHidden:YES];
     [statusLabel setText:@""];
+    [logoutButton setHidden:YES];
     
     friends = [[NSMutableArray alloc] initWithObjects:@"553998562",@"816784662", @"100005730520003", @"100004208564196", @"100000203586379",@"100005636130299", @"100005551420166",nil];
     
@@ -441,7 +466,7 @@ NSString* fbID;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 if (status == 200) {
-                    [statusLabel setText:[NSString stringWithFormat:@"You are logged in as %@ %@",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"]]];
+                    [statusLabel setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]]];
                     [table setHidden:NO];
                     [callButton setHidden:NO];
                     [callUser setHidden:NO];
