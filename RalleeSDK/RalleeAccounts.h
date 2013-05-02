@@ -43,6 +43,7 @@ typedef void(^RalleeCallHandler)(NSInteger state);
 - (BOOL) answerCall;
 - (BOOL) endCall;
 - (BOOL) cancelCall;
+-(void)disconnect;
 
 - (void)openWithCompletionHandler:(RalleeCallHandler)handler1;
 

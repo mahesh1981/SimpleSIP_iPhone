@@ -10,11 +10,12 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "AppDelegate.h"
 #import "RalleeSDK.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 
 @interface ViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, CallHandlerDelegate>{
-
+    IBOutlet UILabel *userName;
     IBOutlet UILabel *statusLabel;
     IBOutlet UITableView* table;
     IBOutlet UITextField *callUser;
@@ -32,10 +33,12 @@
     NSString* called_user;
     IBOutlet UITextField* numberField;
     IBOutlet UIButton* dialNumberButton;
+    IBOutlet UIButton* logoutButton;
     IBOutlet UIButton* cancelCallButton;
     
     BOOL outgoingCall;
     BOOL isAnswering;
+    NSString* callerName;
     
    // IBOutlet UILabel *testLabel;
 }
@@ -49,6 +52,7 @@
 
 -(IBAction)answerCall:(id)sender;
 -(IBAction)rejectCall:(id)sender;
+-(IBAction)logout:(id)sender;
 
 @property (strong, nonatomic) AppDelegate *shared;
 
