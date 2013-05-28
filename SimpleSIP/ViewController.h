@@ -21,6 +21,7 @@
     IBOutlet UITextField *callUser;
     IBOutlet UIButton *loginButton;
     IBOutlet UIButton* callButton;
+    IBOutlet UIButton* rtLogin;
     
     IBOutlet UIButton *rejectButton;
     IBOutlet UIButton *answerButton;
@@ -43,6 +44,7 @@
    // IBOutlet UILabel *testLabel;
 }
 - (IBAction)fbLogin:(id)sender;
+- (IBAction)rtLogin:(id)sender;
 
 - (void) callBack:(NSDictionary*)dict2;
 
@@ -53,6 +55,7 @@
 -(IBAction)answerCall:(id)sender;
 -(IBAction)rejectCall:(id)sender;
 -(IBAction)logout:(id)sender;
+-(IBAction)settings:(id)sender;
 
 @property (strong, nonatomic) AppDelegate *shared;
 

@@ -24,9 +24,15 @@
 
 - (BOOL) callUser:(callUserData )callData;
 
+- (BOOL) conference1;
+- (BOOL) conference2;
+- (BOOL) conference3;
+- (BOOL) conference4;
+
+
 - (BOOL) answerCall;
 
-
++ (id) sharedController;
 
 
 + (void)processCallState:(NSNotification *)notification;

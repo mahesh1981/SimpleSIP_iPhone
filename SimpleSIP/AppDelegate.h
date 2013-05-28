@@ -21,8 +21,12 @@
     NSString *userName;
     NSString *pwd;
    // app_config_t app_conf;
+    
+    NSMutableDictionary* codecsDict;
 
 }
+
+@property (strong, nonatomic) NSMutableDictionary* codecsDict;
 
 @property (strong, nonatomic) FBSession *session;
 

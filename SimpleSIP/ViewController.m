@@ -13,15 +13,19 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "RalleeSDK.h"
 #import "MainPage.h"
+#import "SettingsViewController.h"
 
-#define fb
 
 //#define thirdParty
 
 NSString* kAppId = @"141462222695498";
 NSString* fbID;
 
-//#define chandra
+#define joy12345
+
+//#define nancy3
+
+//#define fb_3
 
 @interface ViewController ()
 
@@ -32,6 +36,13 @@ NSString* fbID;
 @implementation ViewController
 @synthesize shared;
 @synthesize requestConnection;
+
+-(IBAction)settings:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"settingsID"];
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 - (IBAction)logout:(id)sender {
     [table setHidden:YES];
@@ -119,10 +130,10 @@ NSString* fbID;
 
 - (IBAction)callUser:(id)sender {
     
-    RalleeVoiceCall* voice = [[RalleeVoiceCall alloc] init];
+    RalleeVoiceCall* voice = [RalleeVoiceCall sharedController];
 
     callUserData cud;
-    cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    
     
 
     if ([[callUser text] length] == 0){
@@ -131,11 +142,21 @@ NSString* fbID;
     }
     else {
         NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
-        if ([[callUser text] rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+      //  if ([[callUser text] rangeOfCharacterFromSet:notDigits].location == NSNotFound)
         {
             cud.called_user = [callUser text];
-            cud.sn_type_caller = @"fb";
-            cud.sn_type_called = @"fb";
+            
+#if defined(thirdParty)
+            cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"];
+            cud.sn_type_caller = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
+            cud.sn_type_called = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
+#else
+            cud.caller_user = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"];
+            cud.sn_type_caller = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
+            cud.sn_type_called = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
+            
+#endif
+           
             
             BOOL abc = [voice callUser:cud];
             if (abc)
@@ -167,10 +188,11 @@ NSString* fbID;
             else
                 NSLog(@"call is unsuccesful");
         }
-        else {
-            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No proper id to call" message:@"Please select a user or enter proper facebook id of the user to call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-            [alert show];
-        }
+//        else
+//        {
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"No proper id to call" message:@"Please select a user or enter proper facebook id of the user to call" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//            [alert show];
+//        }
     }
 
 }
@@ -186,37 +208,20 @@ NSString* fbID;
     RalleeReg* ralleeReg = [RalleeReg sharedController];
     UserAuthenticationData ud;
     
-    //NSLog(@"********** %@", appDelegate.session.accessToken);
-    
-#if defined(fb)
     ud.first_name = [[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"];
     ud.last_name = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"];
     ud.email = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
     ud.app_ver = @"rallee_2.0";
     ud.SNAccessToken = appDelegate.session.accessToken;
-    ud.SNID = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
+    ud.SNID = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"];
     ud.SNUsername = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
-    ud.SNName = @"fb";
-    ud.device_token = @"device_iPhone";
-#else
-    ud.first_name = @"Joy";//[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"];
-    ud.last_name = @"Banerjee";//[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"];
-    ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
-    ud.app_ver = @"rallee_2.0";
-    ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
-    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-    ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
-    ud.SNPassword = @"noPassword";
-    ud.SNName = @"rt";
+    ud.SNName = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
     ud.device_token = @"device_iPhone";
     
-#endif
-    [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]]];
+    [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"]]];
     [statusLabel setText:@"Connecting..."];
    
     BOOL str = [ralleeReg registerToRallee:ud];
-    
-    //    id str = [middleware registerToRallee:[[NSDictionary alloc] initWithObjectsAndKeys:[[NSDictionary alloc] initWithObjectsAndKeys: [[NSDictionary alloc] initWithObjectsAndKeys:appDelegate.session.accessToken, @"fb", nil], @"access_tokens", [[NSDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%@:%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"],[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]], @"fb",     nil], @"account_info", nil],@"credentials",     [[NSDictionary alloc] initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"], @"first_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], @"last_name",      [[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"], @"email",     @"Rallee_2.0", @"rallee_ver",     nil], @"data", nil]];
     
     if (str)
         NSLog(@"register response : success");
@@ -284,9 +289,10 @@ NSString* fbID;
     
     NSLog(@"id of the user : %@", [result objectForKey:@"id"]);
     
-    [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"id"] forKey:@"FBID"];
+    [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"id"] forKey:@"SNID"];
     
     [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"username"] forKey:@"FBusername"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"fb" forKey:@"SNName"];
     
     [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"email"] forKey:@"FBemail"];
     NSString* name1 = [result objectForKey:@"name"];
@@ -334,26 +340,145 @@ NSString* fbID;
     }
 }
 
+- (IBAction)rtLogin:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:@"rt" forKey:@"SNName"];
+    RalleeReg* ralleeReg = [RalleeReg sharedController];
+    UserAuthenticationData ud;
+    
+#if defined(joy)
+    ud.first_name = @"Joy3";
+    ud.last_name = @"Banerjee3";
+    ud.email = @"joy.banerjee3@gmail.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151655";
+    ud.SNID = @"joy3";
+    ud.SNUsername = @"joy8401";
+    ud.SNPassword = @"noPassword";
+    
+#elif defined(joy12345)
+    ud.first_name = @"nancy2";
+    ud.last_name = @"p2";
+    ud.email = @"np2@rt.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151635";
+    ud.SNID = @"12345";
+    ud.SNUsername = @"np123";
+    ud.SNPassword = @"pass";
+    
+#elif defined(nancy3)
+    ud.first_name = @"nancy3";
+    ud.last_name = @"p3";
+    ud.email = @"np3@rt.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151640";
+    ud.SNID = @"23456";
+    ud.SNUsername = @"np1234";
+    ud.SNPassword = @"pass2";
+    
+    
+#elif defined(fb_3)
+    ud.first_name = @"Ivan3";
+    ud.last_name = @"Stankovic";
+    ud.email = @"ivan3@rall.ee";
+    ud.SNAccessToken = @"1561vfdsavfsd152445";
+    ud.SNID = @"fb_3";
+    ud.SNUsername = @"fb_3";
+    ud.SNPassword = @"fb_3";
+    
+#else
+    ud.first_name = @"manik";
+    ud.last_name = @"tech";
+    ud.email = @"m@rt.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151655";
+    ud.SNID = @"9876543";
+    ud.SNUsername = @"maniktech";
+    ud.SNPassword = @"pass";
+#endif
+    
+    [[NSUserDefaults standardUserDefaults] setObject:ud.SNID forKey:@"SNID"];
+    
+    [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",ud.first_name,ud.last_name, [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"]]];
+    [statusLabel setText:@"Connecting..."];
+    
+    ud.SNName = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
+    ud.device_token = @"device_iPhone";
+    
+    ud.app_ver = @"rallee_2.0";
+    
+    [statusLabel setText:@"Requesting Middleware for authentication"];
+    
+    BOOL str = [ralleeReg registerToRallee:ud];
+    
+    if (str)
+        NSLog(@"register response : success");
+    else
+        NSLog(@"register response : failure");
+
+}
+
 #if defined(thirdParty)
 
 - (IBAction)fbLogin:(id)sender {
    // AppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
     
     RalleeReg* ralleeReg = [RalleeReg sharedController];
+   
     UserAuthenticationData ud;
     
-
-    ud.first_name = @"Joy";//[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"];
-    ud.last_name = @"Banerjee";//[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"];
-    ud.email = @"joy.banerjee@gmail.com";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBemail"];
-    ud.app_ver = @"rallee_2.0";
-    ud.SNAccessToken = @"1561vfdsavfsd15165";//appDelegate.session.accessToken;
-    ud.SNID = @"joy1";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"];
-    ud.SNUsername = @"joy364";//[[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
+#if defined(joy)
+    ud.first_name = @"Joy3";
+    ud.last_name = @"Banerjee3";
+    ud.email = @"joy.banerjee3@gmail.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151655";
+    ud.SNID = @"joy3";
+    ud.SNUsername = @"joy8401";
     ud.SNPassword = @"noPassword";
-    ud.SNName = @"rt";
+    
+#elif defined(joy12345)
+    ud.first_name = @"nancy2";
+    ud.last_name = @"p2";
+    ud.email = @"np2@rt.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151635";
+    ud.SNID = @"12345";
+    ud.SNUsername = @"np123";
+    ud.SNPassword = @"pass";
+    
+#elif defined(nancy3)
+    ud.first_name = @"nancy3";
+    ud.last_name = @"p3";
+    ud.email = @"np3@rt.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151640";
+    ud.SNID = @"23456";
+    ud.SNUsername = @"np1234";
+    ud.SNPassword = @"pass2";
+    
+    
+#elif defined(fb_3)
+    ud.first_name = @"Ivan3";
+    ud.last_name = @"Stankovic";
+    ud.email = @"ivan3@rall.ee";
+    ud.SNAccessToken = @"1561vfdsavfsd152445";
+    ud.SNID = @"fb_3";
+    ud.SNUsername = @"fb_3";
+    ud.SNPassword = @"fb_3";
+    
+#else
+    ud.first_name = @"manik";
+    ud.last_name = @"tech";
+    ud.email = @"m@rt.com";
+    ud.SNAccessToken = @"1561vfdsavfsd151655";
+    ud.SNID = @"9876543";
+    ud.SNUsername = @"maniktech";
+    ud.SNPassword = @"pass";
+#endif
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:ud.SNID forKey:@"SNID"];
+    
+    [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",ud.first_name,ud.last_name, [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"]]];
+    [statusLabel setText:@"Connecting..."];
+    
+    ud.SNName = ;
     ud.device_token = @"device_iPhone";
     
+    ud.app_ver = @"rallee_2.0";
 
     [statusLabel setText:@"Requesting Middleware for authentication"];
 
@@ -365,8 +490,6 @@ NSString* fbID;
         NSLog(@"register response : failure");
 
 }
-
-
 
 #else
 
@@ -474,8 +597,6 @@ NSString* fbID;
     [numberField setHidden:YES];
 
     isAnswering= NO;
-    
-    
 
     [statusLabel setText:@""];
     [logoutButton setHidden:YES];
@@ -494,9 +615,9 @@ NSString* fbID;
                                                                   @"bg3.jpg"
                                                                   ]]];
     
-    RalleeReg* middle = [RalleeReg sharedController];
+    RalleeReg* reg = [RalleeReg sharedController];
     
-    BOOL y = [middle initRalleeSDK:@"myAppKey"];
+    BOOL y = [reg initRalleeSDK:@"myAppKey"];
     
     if (y) 
         NSLog(@"init success");
@@ -526,8 +647,9 @@ NSString* fbID;
             dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
             dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                 if (status == 200) {
-                  //  [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"FBID"]]];
+                  //  [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"]]];
                     [statusLabel setText:@"Connected"];
+                     [loginButton setHidden:YES];
                     [logoutButton setHidden:NO];
                     [table setHidden:NO];
                     [callButton setHidden:NO];
@@ -539,11 +661,7 @@ NSString* fbID;
                 }
                 else
                     [loginButton setHidden:NO];
-
-                
             });
-            
-            
         });
 
         //dispatch_queue_t main_queue = dispatch_get_main_queue();
@@ -571,6 +689,32 @@ NSString* fbID;
             }];
         }
     }
+    
+    
+    
+    NSDictionary* codecsDict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                [NSNumber numberWithBool:YES], @"enableG711u",
+                                [NSNumber numberWithBool:YES], @"enableG711a",
+                                [NSNumber numberWithBool:YES], @"enableG722",
+                                [NSNumber numberWithBool:YES], @"enableG7221",
+                                [NSNumber numberWithBool:YES], @"enableGSM",
+                                [NSNumber numberWithBool:YES], @"enableG729",
+                                [NSNumber numberWithBool:YES], @"enablespeex8",
+                                [NSNumber numberWithBool:YES], @"enablespeex16",
+                                [NSNumber numberWithBool:YES], @"enablespeex32",
+                                [NSNumber numberWithBool:YES], @"enableiLBC",
+                                [NSNumber numberWithBool:YES], @"enableSILK8",
+                                [NSNumber numberWithBool:YES], @"enableSILK12",
+                                [NSNumber numberWithBool:YES], @"enableSILK16",
+                                [NSNumber numberWithBool:YES], @"enableSILK24",
+                                [NSNumber numberWithBool:YES], @"enableCODEC2",
+                                nil];
+    
+    
+   // [accs2 setCodecs:codecsDict];
+    
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -610,19 +754,10 @@ NSString* fbID;
             /*if the call is an incoming call*/
             // if (!outgoingCall && !isAnswering)
             
-            NSString* calleeName = [NSString stringWithFormat:@"%@",[notificationDict objectForKey:@"RemoteInfo"]];
-            NSRange a = [calleeName rangeOfString:@":"];
-            NSString* name2 = [calleeName substringFromIndex:a.location];
-            NSRange b = [name2 rangeOfString:@"@"];
-            
-           
-                callerName = [NSString stringWithString:[name2 substringToIndex:b.location]];
-            
+            callerName = [NSString stringWithFormat:@"%@",[notificationDict objectForKey:@"RemoteInfo"]];
             
             
             NSLog(@"Incoming Call from %@", callerName);
-            
-            
             
             if ([stateStr isEqualToString:@"EARLY"])
             {
@@ -700,56 +835,8 @@ NSString* fbID;
            [statusLabel setText:[NSString stringWithFormat:@"Call Connected %@", [callUser text] ]];
             if(outgoingCall && [stateStr isEqualToString:@"DISCONNCTD"])
              [statusLabel setText:@"Call Disconnected"];
-            
-            //            else if(outgoingCall)
-            //            {
-            //                [cancelCallButton setHidden:NO];
-            //
-            //                [table setHidden:YES];
-            //                [callButton setHidden:YES];
-            //                [callUser setHidden:YES];
-            //                [numberField setHidden:YES];
-            //                [dialNumberButton setHidden:YES];
-            //                [rejectButton setHidden:YES];
-            //                [answerButton setHidden:YES];
-            //            }
-            
-            
-            
-            // [self.testLabel setText:@"NEW"];
-            
-            //[callButton setHidden:YES];
-            
-            //[statusLabel setText:@"Incoming Call from %@", ];
-            
-            
-            
-            
-            //            NSLog(@"call state is %@", [notificationDict objectForKey:@""]);
-            //
-            //            if ([stateStr isEqualToString:@"CONFIRMED"])
-            //                NSLog(@"connected succesfully");
-            //            else if ([stateStr isEqualToString:@"DISCONNCTD"])
-            //                NSLog(@"Disconnected");
-            //            else if ([stateStr isEqualToString:@"CONNECTING"])
-            //                NSLog(@"Connecting");
-            //            else if ([stateStr isEqualToString:@"CALLING"])
-            //                NSLog(@"calling");
-            //            else {
-            //                NSLog(@"Calling the answer and the state is %@", stateStr);
-            
-            
-            
-            
-            
-            
         });
-        
-        
     });
-    
-    
-    
 }
 
 
@@ -757,8 +844,6 @@ NSString* fbID;
 {
     [answerButton setHidden:YES];
     [rejectButton setHidden:YES];
-    
-    NSLog(@"caller name is %@",callerName);
     
     NSString* str = [statusLabel text];
     

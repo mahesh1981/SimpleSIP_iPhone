@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-
-
 typedef struct UserAuthenticationData {
     NSString* first_name;
     NSString* last_name;
@@ -34,21 +31,16 @@ typedef struct callUserData {
 }callUserData;
 
 @interface Rallee : NSObject {
-    
 }
 
 @property (nonatomic) UserAuthenticationData userData;
-
 @property (nonatomic) callUserData cid;
-
 @property (nonatomic, strong) NSString *const RRServiceURL;
+
 extern NSString *const RalleeServer;
 extern NSString *const RalleeAccountStatus;
-
 extern NSString *const RRURL;
-
 extern NSString *const RalleeRegister;
 extern NSString *const RalleeCall;
-
 
 @end

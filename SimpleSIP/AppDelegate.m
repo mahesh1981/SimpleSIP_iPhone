@@ -19,6 +19,27 @@
 @synthesize password;
 @synthesize userName;
 @synthesize session = _session;
+@synthesize codecsDict;
+
+- (void) setCodecs {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *settingsPath = [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+    
+    if ([fileManager fileExistsAtPath:settingsPath] == NO) {
+        NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"settings" ofType:@"plist"];
+        [fileManager copyItemAtPath:resourcePath toPath:settingsPath error:&error];
+        NSLog(@"settings file copied");
+    }
+    else  {
+        NSLog(@"settings file exists");
+    }
+    
+    codecsDict = [[NSMutableDictionary alloc] initWithContentsOfFile:settingsPath];
+}
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -37,6 +58,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [self setCodecs];
+    
     return YES;
 }
 							
