@@ -15,17 +15,12 @@ typedef struct accountDetails {
     NSString* server;
     long localPort;
     NSString* stunServer;
+    NSMutableDictionary* codecsDictionary;
 }accountDetails;
 
 typedef void(^RalleeAccountsHandler)(NSDictionary *dict);
 
-
-//typedef void(^RalleeCallHandler)(NSInteger state);
-
 @protocol CallHandlerDelegate;
-
-typedef void(^RalleeCallHandler)(NSInteger state);
-
 
 @interface RalleeAccounts : NSObject {
     accountDetails acct;
@@ -40,21 +35,22 @@ typedef void(^RalleeCallHandler)(NSInteger state);
 - (BOOL) callUsingNumber:(NSString *)number;
 - (void) processCallState:(NSNotification *)notification;
 
-- (void) setCodecs:(NSDictionary *)codecsDict;
+- (void) setCodecs:(NSDictionary *)codecsDict middlewareURL:(NSString *)middlewareURL;
+
+- (NSDictionary *) getCodecs;
 
 - (BOOL) answerCall;
 - (BOOL) endCall;
 - (BOOL) cancelCall;
 -(void)disconnect;
 -(void)sendMessage;
+-(void)initAcc;
 
-- (void)openWithCompletionHandler:(RalleeCallHandler)handler1;
+
+- (void) reconnect;
 
 @property (nonatomic, strong) id<CallHandlerDelegate> delegate;
 @property (nonatomic, copy) RalleeAccountsHandler handler;
-
-@property (nonatomic, copy) RalleeCallHandler callHandler;
-
 
 @end
 

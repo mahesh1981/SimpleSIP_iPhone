@@ -8,11 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "MainPage.h"
-
-
-
-
 @implementation AppDelegate
 
 @synthesize server;
@@ -20,8 +15,11 @@
 @synthesize userName;
 @synthesize session = _session;
 @synthesize codecsDict;
+@synthesize middlewareURL;
 
 - (void) setCodecs {
+    middlewareURL = [[NSString alloc] initWithString:@"http://murmur-dev.socialcallz.net:8080/rallee-kazoo-test/%@/"];
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -58,6 +56,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [UIDevice currentDevice].proximityMonitoringEnabled = YES;
+    BOOL shouldDimScreen = [UIDevice currentDevice].proximityState;
+    
+    if (shouldDimScreen) {
+        // do whatever you want
+    } else {
+        // light the screen back up
+    }
     
     [self setCodecs];
     

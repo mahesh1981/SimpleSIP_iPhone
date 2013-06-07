@@ -15,16 +15,13 @@
 #import "MainPage.h"
 #import "SettingsViewController.h"
 
-
-//#define thirdParty
-
 NSString* kAppId = @"141462222695498";
 NSString* fbID;
 
+//#define thirdParty
+
 #define joy12345
-
 //#define nancy3
-
 //#define fb_3
 
 @interface ViewController ()
@@ -217,6 +214,9 @@ NSString* fbID;
     ud.SNUsername = [[NSUserDefaults standardUserDefaults] objectForKey:@"FBusername"];
     ud.SNName = [[NSUserDefaults standardUserDefaults] objectForKey:@"SNName"];
     ud.device_token = @"device_iPhone";
+    ud.codecsDictionary = shared.codecsDict;
+    ud.middlewareURL = shared.middlewareURL;
+    
     
     [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"]]];
     [statusLabel setText:@"Connecting..."];
@@ -503,7 +503,6 @@ NSString* fbID;
     appDelegate.session = [[FBSession alloc] initWithAppID:@"141462222695498" permissions:[NSArray arrayWithObjects:@"email", nil] defaultAudience:FBSessionDefaultAudienceFriends urlSchemeSuffix:nil tokenCacheStrategy:nil
                            ];
     
-    
     // this button's job is to flip-flop the session from open to closed
     //   if (appDelegate.session.isOpen) {
     // if a user logs out explicitly, we delete any cached token information, and next
@@ -565,11 +564,43 @@ NSString* fbID;
     [numberField resignFirstResponder];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+    [table setHidden:YES];
+    [callButton setHidden:YES];
+    [callUser setHidden:YES];
+    
+    [rejectButton setHidden:YES];
+    [answerButton setHidden:YES];
+    [cancelCallButton setHidden:YES];
+    [dialNumberButton setHidden:YES];
+    [numberField setHidden:YES];
+    
+    [loginButton setHidden:NO];
+    [logoutButton setHidden:YES];
+    [statusLabel setText:@"connecting..."];
+    
+    [self fbLogin:nil];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    accs2 = [RalleeAccounts sharedController];
+    accs2.delegate=self;
+    
+    RalleeReg* reg = [RalleeReg sharedController];
+    
+    BOOL y = [reg initRalleeSDK:@"myAppKey"];
+    
+    if (y)
+        NSLog(@"init success");
+    else
+        NSLog(@"init failed");
+    
+    shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     callerName = [[NSString alloc] init];
     
     [[answerButton layer] setCornerRadius:5];
@@ -614,28 +645,6 @@ NSString* fbID;
                                                                 //  @"bg.jpg"
                                                                   @"bg3.jpg"
                                                                   ]]];
-    
-    RalleeReg* reg = [RalleeReg sharedController];
-    
-    BOOL y = [reg initRalleeSDK:@"myAppKey"];
-    
-    if (y) 
-        NSLog(@"init success");
-    else
-        NSLog(@"init failed");
-    
-   // [callButton setHidden:YES];
-    
-    accs2 = [RalleeAccounts sharedController];
-
-
-    
-    accs2.delegate=self;
-    
-    //NSLog(@"before handler");
-    
-    
-
     accs2.handler = ^(NSDictionary* dict) {
         int status = [[NSString stringWithFormat:@"%@",[dict objectForKey:@"Status"]] intValue];
         
@@ -654,9 +663,7 @@ NSString* fbID;
                     [table setHidden:NO];
                     [callButton setHidden:NO];
                     [callUser setHidden:NO];
-
                     [dialNumberButton setHidden:NO];
-
                     [numberField setHidden:NO];
                 }
                 else
@@ -669,7 +676,7 @@ NSString* fbID;
 
     };
     
-    shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     if (!appDelegate.session.isOpen) {
@@ -689,33 +696,10 @@ NSString* fbID;
             }];
         }
     }
+   
+   // [accs2 getCodecs];
     
-    
-    
-    NSDictionary* codecsDict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                [NSNumber numberWithBool:YES], @"enableG711u",
-                                [NSNumber numberWithBool:YES], @"enableG711a",
-                                [NSNumber numberWithBool:YES], @"enableG722",
-                                [NSNumber numberWithBool:YES], @"enableG7221",
-                                [NSNumber numberWithBool:YES], @"enableGSM",
-                                [NSNumber numberWithBool:YES], @"enableG729",
-                                [NSNumber numberWithBool:YES], @"enablespeex8",
-                                [NSNumber numberWithBool:YES], @"enablespeex16",
-                                [NSNumber numberWithBool:YES], @"enablespeex32",
-                                [NSNumber numberWithBool:YES], @"enableiLBC",
-                                [NSNumber numberWithBool:YES], @"enableSILK8",
-                                [NSNumber numberWithBool:YES], @"enableSILK12",
-                                [NSNumber numberWithBool:YES], @"enableSILK16",
-                                [NSNumber numberWithBool:YES], @"enableSILK24",
-                                [NSNumber numberWithBool:YES], @"enableCODEC2",
-                                nil];
-    
-    
-   // [accs2 setCodecs:codecsDict];
-    
-    
-    
-	// Do any additional setup after loading the view, typically from a nib.
+   // [self fbLogin:nil];
 }
 
 - (void)openWithCallBackHandler:(NSDictionary*)notificationDict;
@@ -759,6 +743,10 @@ NSString* fbID;
             
             NSLog(@"Incoming Call from %@", callerName);
             
+            if ([audioPlayer isPlaying]) {
+                [audioPlayer stop];
+            }
+            
             if ([stateStr isEqualToString:@"EARLY"])
             {
                 
@@ -772,6 +760,20 @@ NSString* fbID;
                 
                 //[callButton performSelector:@selector() withObject:nil];
                 
+               
+                
+                NSURL *url = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/ringtone.mp3", [[NSBundle mainBundle] resourcePath]]];
+                
+                NSError *error;
+                audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+                audioPlayer.numberOfLoops = -1;
+                
+                if (audioPlayer == nil)
+                    NSLog(@"%@", [error description]);
+                else 
+                    [audioPlayer play];
+                
+            
                 
                 [rejectButton setHidden:NO];
                 [answerButton setHidden:NO];
@@ -891,11 +893,7 @@ NSString* fbID;
     
     [accs2 endCall];
     
-    
-    
     [cancelCallButton setHidden:YES];
-    
-    
     [table setHidden:NO];
     [callButton setHidden:NO];
     [callUser setHidden:NO];
@@ -906,11 +904,9 @@ NSString* fbID;
     [answerButton setHidden:YES];
     [rejectButton setHidden:YES];
     
-    
     outgoingCall = NO;
     isAnswering = NO;
-    [statusLabel setText:@"Last Call Cancelled"];
-    
+    [statusLabel setText:@"Last Call ended"];
 
 }
 

@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "RalleeSDK.h"
+#import "ViewController.h"
 
 @interface SettingsViewController : UITableViewController {
-    NSDictionary* codecsDict;
+    NSMutableDictionary* codecsDict;
     AppDelegate* shared;
+    NSMutableArray* middleware;
+    RalleeAccounts* accs;
+    NSString* middlewareURL;
 }
+
+- (IBAction)back:(id)sender;
+
 
 @end

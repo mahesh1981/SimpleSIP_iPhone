@@ -27,32 +27,14 @@
 {
     [super viewDidLoad];
     
+    self.tableView.allowsMultipleSelection = YES;
+    
     shared = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    NSLog(@"from plist %@", shared.codecsDict);
+    middleware = [[NSMutableArray alloc] initWithObjects:@"http://murmur-dev.socialcallz.net:8080/rallee-kazoo-test/%@/",@"http://107.21.109.104:8080/rallee-kazoo/%@/", nil];
     
-    codecsDict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                [NSNumber numberWithBool:YES], @"enableG711u",
-                                [NSNumber numberWithBool:YES], @"enableG711a",
-                                [NSNumber numberWithBool:YES], @"enableG722",
-                                [NSNumber numberWithBool:YES], @"enableG7221",
-                                [NSNumber numberWithBool:YES], @"enableGSM",
-                                [NSNumber numberWithBool:YES], @"enableG729",
-                                [NSNumber numberWithBool:YES], @"enablespeex8",
-                                [NSNumber numberWithBool:YES], @"enablespeex16",
-                                [NSNumber numberWithBool:YES], @"enablespeex32",
-                                [NSNumber numberWithBool:YES], @"enableGSM",
-                                [NSNumber numberWithBool:YES], @"enableG722",
-                                [NSNumber numberWithBool:YES], @"enableiLBC",
-                                [NSNumber numberWithBool:YES], @"enableSILK8",
-                                [NSNumber numberWithBool:YES], @"enableSILK12",
-                                [NSNumber numberWithBool:YES], @"enableSILK16",
-                                [NSNumber numberWithBool:YES], @"enableSILK24",
-                                [NSNumber numberWithBool:YES], @"enableCODEC2",
-                                nil];
+    middlewareURL = shared.middlewareURL;
     
-    NSLog(@"dict %@", codecsDict);
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -71,11 +53,22 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 
-    return 1;
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0)
+        return @"Middleware URL";
+    else
+        return @"Codecs";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (section == 0) {
+        return 2;
+    }
+    
     return [shared.codecsDict count];
 }
 
@@ -84,13 +77,38 @@
     static NSString *CellIdentifier = @"setting";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSLog(@"enable g722 bool is : %s",(BOOL *)[shared.codecsDict valueForKey:@"enableG722"]);
+    if (indexPath.section == 0) {
+        if (indexPath.row <2) {
+            [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+            
+            [cell.textLabel setText:[middleware objectAtIndex:indexPath.row]];
+            
+            
+            
+            if ([middlewareURL isEqualToString:[middleware objectAtIndex:indexPath.row]]) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            }
+            else
+                cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+       
+    }
     
-    [cell.textLabel setText:[shared.codecsDict valueForKey:@"enableG722"]];
+    if (indexPath.section == 1) {
+        [cell.textLabel setFont:[UIFont fontWithName:@"System Bold" size:17]];
+        [cell.textLabel setText:[[shared.codecsDict allKeys] objectAtIndex:indexPath.row]];
+        
+        if( [[shared.codecsDict objectForKey:[[shared.codecsDict allKeys] objectAtIndex:indexPath.row]] intValue] == 1) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+
+    }
     
-    
-    // Configure the cell...
-    
+        
+     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+      
     return cell;
 }
 
@@ -137,14 +155,53 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    NSString* key = [NSString stringWithString:[cell.textLabel text]];
+    
+    if (!self.tableView.isEditing) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+    if (indexPath.section == 1) {
+        if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+            [shared.codecsDict setValue:[NSNumber numberWithInt:0] forKey:key];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        } else {
+            [shared.codecsDict setValue:[NSNumber numberWithInt:1] forKey:key];
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+    }
+    else {
+        NSIndexPath *indexpath1;
+        
+        if (indexPath.row == 0) {
+            indexpath1 = [NSIndexPath indexPathForRow:1 inSection:0];
+        }
+        else
+           indexpath1 = [NSIndexPath indexPathForRow:0 inSection:0];
+
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        middlewareURL = [cell.textLabel text];
+        cell = [tableView cellForRowAtIndexPath:indexpath1];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+    }
 }
 
+- (IBAction)back:(id)sender {
+    shared.middlewareURL = middlewareURL;
+    [accs setCodecs:shared.codecsDict middlewareURL:middlewareURL];
+    [accs disconnect];
+    
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *settingsPath = [documentsDirectory stringByAppendingPathComponent:@"settings.plist"];
+    [shared.codecsDict writeToFile:settingsPath atomically:YES];
+    
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+   // ViewController* view = [[ViewController alloc] initWithNibName:nil bundle:nil];
+   // [view fbLogin:nil];
+    [super.view setNeedsDisplay];
+}
 @end

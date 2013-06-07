@@ -20,6 +20,8 @@ typedef struct UserAuthenticationData {
     NSString* SNName;
     NSString* appKey;
     NSString* SNPassword;
+    NSMutableDictionary* codecsDictionary;
+    NSString* middlewareURL;
     
 } UserAuthenticationData;
 
@@ -39,7 +41,7 @@ typedef struct callUserData {
 
 extern NSString *const RalleeServer;
 extern NSString *const RalleeAccountStatus;
-extern NSString *const RRURL;
+extern NSString * RRURL;
 extern NSString *const RalleeRegister;
 extern NSString *const RalleeCall;
 

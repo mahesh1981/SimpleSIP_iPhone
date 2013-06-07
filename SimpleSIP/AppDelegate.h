@@ -7,26 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
 #import <AudioToolbox/AudioToolbox.h>
-
 #import <FacebookSDK/FacebookSDK.h>
 
 //#include "MainPage.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     NSString *server;
-   
     NSString *userName;
     NSString *pwd;
-   // app_config_t app_conf;
-    
     NSMutableDictionary* codecsDict;
-
+    NSString* middlewareURL;
 }
 
 @property (strong, nonatomic) NSMutableDictionary* codecsDict;
+@property (strong, nonatomic) NSString* middlewareURL;
 
 @property (strong, nonatomic) FBSession *session;
 

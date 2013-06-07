@@ -1,0 +1,25 @@
+Contents of /Users/techlites/Desktop/SimpleSIP_iPhone/SimpleSIP/SimpleSIP-Prefix.pch
+
+arm-apple-darwin12.3.0
+-x
+objective-c
+-arch
+armv7
+-fmessage-length=0
+-std=gnu99
+-fpascal-strings
+-O0
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk
+-fstrict-aliasing
+-g
+-miphoneos-version-min=6.0
+-I/Users/techlites/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos/include
+-F/Users/techlites/Desktop/SimpleSIP_iPhone/DerivedData/SimpleSIP/Build/Products/Debug-iphoneos
+-F/Users/techlites/Desktop/SimpleSIP_iPhone/Others/FacebookSDK
+-F/Users/techlites/Desktop/SimpleSIP_iPhone/Others
+-ferror-limit=10
+-working-directory=/Users/techlites/Desktop/SimpleSIP_iPhone
+-Xclang
+-detailed-preprocessing-record
+SDK_PRODUCT_BUILD_VERSION=10B141
