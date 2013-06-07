@@ -217,7 +217,6 @@ NSString* fbID;
     ud.codecsDictionary = shared.codecsDict;
     ud.middlewareURL = shared.middlewareURL;
     
-    
     [userName setText:[NSString stringWithFormat:@"%@ %@ (%@)",[[NSUserDefaults standardUserDefaults] objectForKey:@"firstName"],[[NSUserDefaults standardUserDefaults] objectForKey:@"lastName"], [[NSUserDefaults standardUserDefaults] objectForKey:@"SNID"]]];
     [statusLabel setText:@"Connecting..."];
    
@@ -587,6 +586,8 @@ NSString* fbID;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSDictionary* dict = [[NSDictionary alloc] init];
+    
     
     accs2 = [RalleeAccounts sharedController];
     accs2.delegate=self;
@@ -595,8 +596,13 @@ NSString* fbID;
     
     BOOL y = [reg initRalleeSDK:@"myAppKey"];
     
-    if (y)
+    if (y) {
         NSLog(@"init success");
+         dict = [accs2 getCodecs];
+        
+        NSLog(@"dictionary is %@", dict);
+        NSLog(@"keys are %@", [dict allKeys]);
+    }
     else
         NSLog(@"init failed");
     
@@ -920,8 +926,6 @@ NSString* fbID;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void)dealloc {
     [callUser release];

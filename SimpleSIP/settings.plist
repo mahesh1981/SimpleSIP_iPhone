@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>enableG722</key>
-	<false/>
+	<true/>
 	<key>enablespeex32</key>
 	<true/>
 	<key>enablespeex16</key>
-	<false/>
+	<true/>
 	<key>enablespeex8</key>
-	<false/>
+	<true/>
 	<key>enableG729</key>
-	<false/>
+	<true/>
 	<key>enableGSM</key>
-	<false/>
+	<true/>
 	<key>enableG7221</key>
-	<false/>
+	<true/>
 	<key>enableG711a</key>
-	<false/>
+	<true/>
 	<key>enableG711u</key>
-	<false/>
+	<true/>
 	<key>enableiLBC</key>
-	<false/>
+	<true/>
 </dict>
 </plist>

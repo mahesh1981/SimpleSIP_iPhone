@@ -39,7 +39,7 @@ typedef struct callUserData {
 @property (nonatomic) callUserData cid;
 @property (nonatomic, strong) NSString *const RRServiceURL;
 
-extern NSString *const RalleeServer;
+extern NSString * RalleeServer;
 extern NSString *const RalleeAccountStatus;
 extern NSString * RRURL;
 extern NSString *const RalleeRegister;
